@@ -30,3 +30,7 @@ https://www.toysrus.com/
 https://www.mazeltoys.com.ar/
 https://www.thetoystoreonline.com/
 https://www.hamleys.com/
+
+
+Tablero de trabajo:
+https://trello.com/b/RVMau5gT/grupo4-juguetes
