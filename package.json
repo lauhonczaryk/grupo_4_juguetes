@@ -1,0 +1,24 @@
+{
+  "name": "grupo_4_juguetes",
+  "version": "1.0.0",
+  "description": "Ecommerce -  Toys Store  🧸🪀🥏🛹🪁♟️🧩",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauhonczaryk/grupo_4_juguetes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauhonczaryk/grupo_4_juguetes/issues"
+  },
+  "homepage": "https://github.com/lauhonczaryk/grupo_4_juguetes#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
