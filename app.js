@@ -14,11 +14,16 @@ app.get('/', (req,res) =>{
     res.sendFile(path.join(__dirname, '/views/home.html'));
 })
 
-app.get('/signin', (req,res) =>{
-    res.sendFile(path.join(__dirname, '/views/signin.html'));
+app.get('/login', (req,res) =>{
+    res.sendFile(path.join(__dirname, '/views/login.html'));
 })
 
 app.get('/carrito', (req,res) =>{
     res.sendFile(path.join(__dirname, '/views/carrito.html'));
 })
+
+app.get('/register', (req,res) =>{
+    res.sendFile(path.join(__dirname, '/views/register.html'));
+})
+
 
