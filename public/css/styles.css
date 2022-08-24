@@ -1,0 +1,113 @@
+/*colores:
+amarillo #FFE200
+rojo #F41809
+azul #0000DD
+verde #00B212
+gris #D9D9D9
+*/
+
+body {
+    font-family: comic sans-serif;
+}
+
+img {
+    width: 3%;
+}
+
+.footerbox {
+    background-color: #D9D9D9;
+}
+
+.nosotros {
+    display: inline;
+}
+
+.ayuda {
+    display: inline;
+}
+
+.contacto {
+    display: inline;
+}
+
+.cajaazulnav {
+    color: white;
+    background-color: #0000DD;
+}
+
+#carrito {
+    width: 30px;
+}
+
+.totalplata {
+    color: black;
+}
+
+#ofertas {
+    display: inline;
+    color: white;
+    background-color: #F41809;
+}
+
+#buscador {
+    background-color: #D9D9D9;
+}
+
+#ingreso {
+    display: inline;
+    background-color: #FFE200;
+}
+
+#registro {
+    display: inline;
+    background-color: #FFE200;
+}
+
+.carrusel {
+    width: 100%;
+    display: block;
+}
+
+#circulorojo {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    background-color: #F41809;
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#circuloverde {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    background-color:#00B212;
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#circuloazul {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    background-color:#0000DD;
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#circuloamarillo {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    background-color:#FFE200;
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
