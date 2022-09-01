@@ -58,58 +58,64 @@ img {
     background-color: #FFE200;
 }
 
-#registro {
-    display: inline;
+.boton-registro {
     background-color: #FFE200;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 .carrusel {
     width: 100%;
     display: block;
 }
-
-#circulorojo {
-    width: 300px;
-    height: 300px;
+.circulos {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#circulorojo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
     background-color: #F41809;
     border-radius: 50%;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    transition: 200ms;
 }
 
 #circuloverde {
-    width: 300px;
-    height: 300px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
     background-color:#00B212;
     border-radius: 50%;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    transition: 200ms;
 }
-
 #circuloazul {
-    width: 300px;
-    height: 300px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
     background-color:#0000DD;
     border-radius: 50%;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    transition: 200ms;
 }
 
 #circuloamarillo {
-    width: 300px;
-    height: 300px;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
     background-color:#FFE200;
     border-radius: 50%;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    transition: 200ms;
 }
 header  {
 box-sizing: border-box;   
@@ -133,8 +139,19 @@ div.bottom-header{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}   
+.buscador{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 10px;
+}
    
-    
+.cart i{
+    margin: 0px 10px;
+}
+.cart div{
+    margin-right: 10px;
 }
 
 div.burger-menu i{
@@ -177,4 +194,17 @@ width: 75%;
     align-items: center;
     
 }
+#circuloazul:hover,
+#circulorojo:hover,
+#circuloverde:hover,
+#circuloamarillo:hover{
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  width: 215px;
+  height: 215px;
+
+}
+
+
+
+  
 
