@@ -1,0 +1,36 @@
+*{
+    font-family: 'Comic Neue';
+    box-sizing: border-box;
+}
+.formbox{
+background-color: #FFE200;
+border-radius: 10px;
+margin: 0 50px;
+align-items: center;
+}
+.register h2{
+    color: #00B212;
+    font-size: 50px;
+    text-align: center;
+}
+.register p{
+    text-align: center;
+}
+.register input{
+    background-color: gainsboro;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+   
+}
+.register ::placeholder{
+    color: black;
+    font-family: 'Comic Neue';
+}
+.primeralinea input, .terceralinea input{
+    width: 40%;
+}
+.segundalinea input {
+    width: 86%;
+}
