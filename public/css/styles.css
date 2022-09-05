@@ -42,11 +42,10 @@ header {
 }
 
 .cart{
-display: flex;
-z-index: 10;
-background-color: #0000DD;
-height: 100px;
-align-items: center;
+    display: none;
+    z-index: 10;
+    height: 100px;
+    align-items: center;
 }
 
 .cart i {
@@ -56,14 +55,14 @@ align-items: center;
 }
 
 i.bolsa {
-    color: white;
+    color: black;
     display: flex;
 }
 
 .cart p{
     margin-right: 10px;
     margin-left: 10px;
-    color: white;
+    color: black;
 }
 
 div.bottom-header{
@@ -312,6 +311,9 @@ footer img{
     }
     .bottom-header-right form {
         width: 50%;
+    }
+    .cart {
+        display: flex;
     }
 }
 
