@@ -19,21 +19,27 @@ main {
 }
 
 /*HEADER*/
-.ofertasfixed{
+
+.ofertasfixed {
     position: fixed;
-right: 20px;
-bottom: 17px;
-color: white;
-background-color: #F41809;
-padding: 10px;
-border-radius: 10px;
-animation-name: ofertas;
-animation-duration: 1200ms;
-animation-iteration-count: infinite;
+    right: 20px;
+    bottom: 17px;
+    color: white;
+    background-color: #F41809;
+    padding: 10px;
+    border-radius: 10px;
+    animation-name: ofertas;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
 }
+
 @keyframes ofertas {
     100%{width: 162px;
     height: 38px;}
+}
+
+.cartel-contenedor {
+    padding-bottom: 10px;
 }
 
 .cartelfixed {
@@ -41,13 +47,17 @@ animation-iteration-count: infinite;
     color: white;
     background-color: #0000DD;
     width: 100%;
-    height: 18px;
+    margin-bottom: 20px;
     text-align: center;
     font-size: 13px;
 }
 
+.cartelfixed p {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
 header {
-    background-color: #d9d9d9;
     padding-top: 18px;
 }
 
@@ -58,19 +68,8 @@ header {
    justify-content: flex-start; 
 }
 
-.bloque-azul{
-    width: 75%;
-    height: 100px;
-    display: flex;
-    background-color: #0000DD;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    margin-left: 10px;
-}
-
 .cart{
     display: none;
-    z-index: 10;
     height: 100px;
     align-items: center;
 
@@ -98,6 +97,9 @@ div.bottom-header{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    background-image: url("/images/iconos-repetidos.png");
+    background-repeat: repeat;
+    background-size: 500px;
 }
 
 .bottom-header-right {
@@ -231,6 +233,9 @@ div.burger-menu i{
     font-weight: bold;
     font-size: 35px;
     padding: 30px;
+    background-image: url("/images/iconos-repetidos.png");
+    background-repeat: repeat;
+    background-size: 500px;
 }
 
 .circulos p {
@@ -304,6 +309,11 @@ footer section ul {
 
 footer section ul li {
     margin-top: 10px;
+}
+
+footer section ul li a {
+    text-decoration: none;
+    color: black;
 }
 
 .main-footer {
