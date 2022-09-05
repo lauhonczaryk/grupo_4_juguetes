@@ -1,44 +1,80 @@
-*{
+* {
     font-family: 'Comic Neue';
     box-sizing: border-box;
 }
-.formbox{
-background-color: #FFE200;
-border-radius: 10px;
-margin: 0 50px;
-align-items: center;
+
+.formbox {
+    background-color: #FFE200;
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 700px;
 }
-.register h2, .login h2{
+
+h2 {
     color: #00B212;
     font-size: 50px;
     text-align: center;
 }
-.register p, .login p{
+
+p {
     text-align: center;
 }
-.register input, .login input{
+
+.register input {
     background-color: gainsboro;
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
     margin: 20px;
+
     text-align: center;
     align-items: center;
-   
 }
-.register ::placeholder{
+
+.register ::placeholder {
     color: black;
 }
 .login ::placeholder{
     color: black;
 }
 
-.register .primeralinea input, .terceralinea input{
-    width: 30%;
-}
 .login .primeralinea {
 width: 80%;
 }
+
+.primeralinea input, .terceralinea input {
+    width: 40%;
+}
+
 .segundalinea input {
-  width: 80%;
+        width: 86%;
+}
+
+.caja-boton {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.boton-submit {
+    margin: 0 auto;
+    background-color: #FFE200;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    color: black;
+    margin: 3px;
+    box-shadow: 1px 1px 0 0 #4a69bd,
+                2px 2px 0 0 #4a69bd,
+                3px 3px 0 0 #4a69bd,
+                4px 4px 0 0 #4a69bd,
+                5px 5px 0 0 #4a69bd,
+                6px 6px 0 0 #4a69bd
+}
+
+.main-form {
+    margin: 0 20px;
 }
