@@ -1,11 +1,10 @@
-"
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <title>Toys Planet</title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
@@ -18,26 +17,26 @@
 
 <body>
     <header class="main-header">
-        <div class="top-header">
-            <a href="/" class="logo"><img src="/images/logo toys planet.png"></a>
-            <div class="bloque-azul"> </div>
-            <div class="cart">
-             <i class="fa fa-shopping-bag" aria-hidden="true"><p>$0,00</p></i>
-             </div>
-        </div>
         <div class="bottom-header">
+            <a style="margin: 0 20px;" href="/" class="logo"><img src="/images/logo.png"></a>
             <div class="burger-menu">
                 <i class="fa fa-bars burger"></i>
                <p class="ofertas">OFERTAS</p>
             </div>
             <nav class="bottom-header-right">
-                <form action="#" method="GET" class="buscador">
-                    <input type="text" class="fontAwesome" name="nombre" placeholder="Buscar producto...">
-                    <i class="fa fa-search"></i>
+                <form class="search-bar" action="#" method="GET">
+                    <input class="fontAwesome" type="text" placeholder="Buscar producto..." />
+                    <button>Buscar</button>
                 </form>
-                <a class="boton-registro" href="/register">Registro</a>
-                <a class="boton-login" href="/login">Inicio Sesión</a>
+                <div class="botones-nav">
+                    <a class="boton-registro" href="/register">Registro</a>
+                    <a class="boton-login" href="/login">Inicio Sesión</a>
+                </div>
             </nav>
+            <a href="/carrito" class="cart" style="text-decoration: none;">
+                <i class="fa fa-shopping-bag bolsa" aria-hidden="true">
+                <p class="button-cart">$0,00</p></i>
+            </a>
         </div>
     </header>
     <main>
@@ -50,8 +49,10 @@
         </div>
     </main>
     <footer>
-        <img src="/images/logo toys planet.png">
-        <article class="footerbox">
+        <article class="main-footer">
+            <section>
+                <img src="/images/logo.png">
+            </section>
             <section class="contacto">
                 <p><strong>Contacto</strong></p>
                 <ul type="none">
@@ -74,11 +75,13 @@
                 <ul type="none">
                     <li>Atención al cliente</li>
                     <li>Devoluciones</li>
-                    <li><a href="https://www.buenosaires.gob.ar/defensaconsumidor/direccion-general">Defensa del
-                            consumidor</a></li>
+                    <li><a href="https://www.buenosaires.gob.ar/defensaconsumidor/direccion-general">Defensa del consumidor</a></li>
                 </ul>
             </section>
         </article>
+        <div class="copyright">
+            <p>Copyright © 2022 Toys Planet</p>
+        </div>
     </footer>
 </body>
 

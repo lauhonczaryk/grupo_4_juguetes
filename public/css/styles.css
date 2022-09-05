@@ -5,22 +5,32 @@ azul #0000DD
 verde #00B212
 gris #D9D9D9
 */
+
 *{
     font-family: 'Comic Neue';
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
-/*HEADER*/
-.top-header{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+
+main {
+    margin: auto;
+    width: 100%;
 }
+
+/*HEADER*/
+
+header {
+    background-color: #d9d9d9;
+}
+
 .logo {
     display: flex;
     width: 20%px;
    height: 100px;
    justify-content: flex-start; 
 }
+
 .bloque-azul{
     width: 75%;
     height: 100px;
@@ -30,61 +40,136 @@ gris #D9D9D9
     border-bottom-left-radius: 20px;
     margin-left: 10px;
 }
+
 .cart{
-display: flex;
-z-index: 10;
-background-color: #0000DD;
-height: 100px;
-align-items: center;
+    display: none;
+    z-index: 10;
+    height: 100px;
+    align-items: center;
 }
-.cart .i {
-    margin-right: 10px;
+
+.cart i {
+    margin-right: 50px;
     text-align: center;
+    display: flex;
 }
+
+i.bolsa {
+    color: black;
+    display: flex;
+    align-items: center
+}
+
 .cart p{
     margin-right: 10px;
+    margin-left: 10px;
+    color: black;
 }
+
 div.bottom-header{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    justify-content: flex-start;
 }
+
 .bottom-header-right {
     display: flex;
-    flex-wrap: wrap;
     width: 90%;
     align-items: center;
-    justify-content: flex-end;
-  }
-.bottom-header-right form {
-width: 75%;  
+    justify-content: center;
+    flex-wrap: wrap;
 }
+
+.bottom-header-right form {
+width: 70%;  
+}
+
 div.burger-menu i{
     background-color: #0044AA;
     border-radius: 5px;
     color: #FFF;
-    font-size: 25px;
+    font-size: 20px;
     height: 40px;
-   margin-left: 15px;
+    margin-left: 15px;
     padding: 10px;
     width: 40px;
     text-align: center;
+    box-shadow: 1px 1px 0 0 #4a69bd,
+                2px 2px 0 0 #4a69bd,
+                3px 3px 0 0 #4a69bd,
+                4px 4px 0 0 #4a69bd,
+                5px 5px 0 0 #4a69bd,
+                6px 6px 0 0 #4a69bd
    }
+
+.burger-menu {
+    margin: auto;
+}
+
 .fontAwesome {
     width: 85%;
     height: 27px ;
     font-family: 'Helvetica', FontAwesome, sans-serif;
-  }
-.buscador{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    margin-top: 10px;
 }
-.buscador input{
-    background-color: #D9D9D9;
+
+.search-bar {
+    display: flex;
+    background: #6a89cc;
+    width: 500px;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0.2rem 0.6rem 0.2rem 0.2rem;  
+    box-sizing: border-box;
+    box-shadow: 1px 1px 0 0 #4a69bd,
+                2px 2px 0 0 #4a69bd,
+                3px 3px 0 0 #4a69bd,
+                4px 4px 0 0 #4a69bd,
+                5px 5px 0 0 #4a69bd,
+                6px 6px 0 0 #4a69bd
+  }
+  
+  .search-bar input {
+    border: 0;
+    outline: none;
+    height: 100%;
+    width: 85%;
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-style: italic;
+  }
+  
+  .search-bar button {
+    margin: auto;
+    background: none;
     border: none;
-    border-radius: 6px;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    margin-left: 10px;
+}
+
+.botones-nav{
+    margin: 20px;
+}
+
+.button-cart{
+    background-color: #FFE200;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+    margin: 3px;
+    box-shadow: 1px 1px 0 0 #4a69bd,
+    2px 2px 0 0 #4a69bd,
+    3px 3px 0 0 #4a69bd,
+    4px 4px 0 0 #4a69bd,
+    5px 5px 0 0 #4a69bd,
+    6px 6px 0 0 #4a69bd
+
 }
 .boton-registro, .boton-login {
     background-color: #FFE200;
@@ -92,14 +177,22 @@ div.burger-menu i{
     text-decoration: none;
     font-weight: bold;
     color: black;
-    margin: 3px;
     border-radius: 5px;
+    margin: 3px;
+    box-shadow: 1px 1px 0 0 #4a69bd,
+                2px 2px 0 0 #4a69bd,
+                3px 3px 0 0 #4a69bd,
+                4px 4px 0 0 #4a69bd,
+                5px 5px 0 0 #4a69bd,
+                6px 6px 0 0 #4a69bd
 }
+
 /*main*/
 .carrusel {
     width: 100%;
     display: block;
 }
+
 /*CIRCULOS*/
 .circulos {
     display: flex;
@@ -109,8 +202,13 @@ div.burger-menu i{
     color: white;
     font-weight: bold;
     font-size: 35px;
-
+    padding: 30px;
 }
+
+.circulos p {
+    margin: 10px;
+}
+
 #circulorojo {
     display: flex;
     align-items: center;
@@ -132,6 +230,7 @@ div.burger-menu i{
     border-radius: 50%;
     transition: 200ms;
 }
+
 #circuloazul {
     display: flex;
     align-items: center;
@@ -167,33 +266,72 @@ div.burger-menu i{
 /*FOOTER*/
 footer{
      background-color: #D9D9D9;
+     padding: 30px 0;
+     margin: auto;
 }
-.footerbox {
-       display: flex;
-    justify-content: space-around;
-    margin-left: 100px;
+
+footer section ul {
+    margin-top: 20px;
 }
+
+footer section ul li {
+    margin-top: 10px;
+}
+
+.main-footer {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.main-footer section p {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
 footer img{
-    width: 10%;
+    width: 122px;
+}
+
+.copyright {
+    padding-top: 40px;
+    margin: 0 auto;
 }
   
-/* intento de animacion para ofertas
-@keyframes ofertas-animacion {
-    0% {opacity: 0.9;}
-    100%{width: 76px;
-    height: 46px;}
-}
-.ofertas{
-    background-color: #F41809;
-    padding: 10px;
+.copyright p {
     text-align: center;
-    width: 75px;
-    height: 45px;
-    align-items: center;
 }
-.ofertas{
-    animation-name: ofertas-animacion;
-    animation-duration: 0.8s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}*/
+
+/* MEDIA QUERIES */
+
+@media (min-width: 361px) {
+
+}
+
+@media (min-width: 540px) {
+    div.bottom-header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .burger-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .main-footer {
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-footer section p {
+        margin-top: 0px;
+    }
+    .bottom-header-right form {
+        width: 50%;
+    }
+    .cart {
+        display: flex;
+    }
+}
+
