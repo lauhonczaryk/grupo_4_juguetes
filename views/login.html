@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/formstyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Inicio de sesión</title>
 </head>
+
 <body>
-    
+    <form action="/" method="GET" class="login">
+        <h2>Inicia Sesión</h2>
+        <p>Si no tenés cuenta, <a href="/register">registrate</a></p>
+        <div class="formbox">
+            <div class="primeralinea">
+                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+            </div>
+            <div class="segundalinea">
+                <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+            </div>
+        </div>
+    </form>
 </body>
+
 </html>
