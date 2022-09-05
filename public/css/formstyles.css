@@ -2,7 +2,15 @@
     font-family: 'Comic Neue';
     box-sizing: border-box;
 }
-
+.cartelfixed {
+    position: fixed;
+    color: white;
+    background-color: #0000DD;
+    width: 100%;
+    height: 18px;
+    text-align: center;
+    font-size: 13px;
+}
 .formbox {
     background-color: #FFE200;
     width: 100%;
