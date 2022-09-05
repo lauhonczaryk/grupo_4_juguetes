@@ -67,24 +67,39 @@ header {
    height: 100px;
    justify-content: flex-start; 
 }
-
+/*
 .cart{
-    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
     height: 100px;
     align-items: center;
 
-}
+}*/
 
 .cart i {
-    margin-right: 50px;
     text-align: center;
     display: flex;
+   
 }
 
 i.bolsa {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    height: 100px;
+    align-items: center;
     color: black;
     display: flex;
-    align-items: center
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0,0, 0);
+    border-radius: 50%;
+    padding: 5px;
+    border: 3px solid black;
+    text-align: center;
+
 }
 
 .cart p{
@@ -99,7 +114,7 @@ div.bottom-header{
     flex-wrap: wrap;
     background-image: url("/images/iconos-repetidos.png");
     background-repeat: repeat;
-    background-size: 500px;
+    background-size: 100px;
 }
 
 .bottom-header-right {
@@ -186,6 +201,7 @@ div.burger-menu i{
 }
 
 .button-cart{
+    display: none;
     background-color: #FFE200;
     padding: 10px;
     text-decoration: none;
@@ -343,7 +359,7 @@ footer img{
 /* MEDIA QUERIES */
 
 @media (min-width: 361px) {
-
+    
 }
 
 @media (min-width: 540px) {
@@ -370,6 +386,12 @@ footer img{
     }
     .cart {
         display: flex;
+    }
+    .button-cart{
+display: block;
+    }
+    i.bolsa {
+        display: none;
     }
 }
 
