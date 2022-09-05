@@ -47,7 +47,7 @@ align-items: center;
 div.bottom-header{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 .bottom-header-right {
     display: flex;
@@ -177,4 +177,23 @@ footer img{
     width: 10%;
 }
   
-
+/* intento de animacion para ofertas
+@keyframes ofertas-animacion {
+    0% {opacity: 0.9;}
+    100%{width: 76px;
+    height: 46px;}
+}
+.ofertas{
+    background-color: #F41809;
+    padding: 10px;
+    text-align: center;
+    width: 75px;
+    height: 45px;
+    align-items: center;
+}
+.ofertas{
+    animation-name: ofertas-animacion;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}*/

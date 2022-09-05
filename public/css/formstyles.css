@@ -8,29 +8,37 @@ border-radius: 10px;
 margin: 0 50px;
 align-items: center;
 }
-.register h2{
+.register h2, .login h2{
     color: #00B212;
     font-size: 50px;
     text-align: center;
 }
-.register p{
+.register p, .login p{
     text-align: center;
 }
-.register input{
+.register input, .login input{
     background-color: gainsboro;
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
     margin: 20px;
+    text-align: center;
+    align-items: center;
    
 }
 .register ::placeholder{
     color: black;
-    font-family: 'Comic Neue';
 }
-.primeralinea input, .terceralinea input{
-    width: 40%;
+.login ::placeholder{
+    color: black;
+}
+
+.register .primeralinea input, .terceralinea input{
+    width: 30%;
+}
+.login .primeralinea {
+width: 80%;
 }
 .segundalinea input {
-    width: 86%;
+  width: 80%;
 }
