@@ -57,6 +57,7 @@ header {
 i.bolsa {
     color: black;
     display: flex;
+    align-items: center
 }
 
 .cart p{
@@ -147,12 +148,29 @@ div.burger-menu i{
     cursor: pointer;
     padding: 0;
     outline: none;
+    margin-left: 10px;
 }
 
 .botones-nav{
     margin: 20px;
 }
 
+.button-cart{
+    background-color: #FFE200;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+    margin: 3px;
+    box-shadow: 1px 1px 0 0 #4a69bd,
+    2px 2px 0 0 #4a69bd,
+    3px 3px 0 0 #4a69bd,
+    4px 4px 0 0 #4a69bd,
+    5px 5px 0 0 #4a69bd,
+    6px 6px 0 0 #4a69bd
+
+}
 .boton-registro, .boton-login {
     background-color: #FFE200;
     padding: 10px;
