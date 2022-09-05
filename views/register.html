@@ -23,8 +23,10 @@
     <div class="ofertasfixed">
         <i class="fas fa-fire">OFERTAS del día!</i>
     </div>
-    <div class="cartelfixed">
-        <p>Con tu compra superior a $7500, tenés envío gratis</p>
+    <div class="cartel-contenedor">
+        <div class="cartelfixed">
+            <p>Con tu compra superior a $7500, tenés envío gratis</p>
+        </div>
     </div>
     <header class="main-header">
         <div class="bottom-header">
@@ -42,15 +44,15 @@
                     <a class="boton-login" href="/login">Inicio Sesión</a>
                 </div>
             </nav>
-            <div class="cart">
-                <i class="fa fa-shopping-bag bolsa" aria-hidden="true" style="text-decoration: none;">
+            <a href="/carrito" class="cart" style="text-decoration: none;">
+                <i class="fa fa-shopping-bag bolsa" aria-hidden="true">
                 <p class="button-cart">$0,00</p></i>
-            </div>
+            </a>
         </div>
     </header>
     <section class="main-form">
         <h2 style="margin: 20px;">Creá tu cuenta</h2>
-        <p style="margin: 10px;">Si ya tenés cuenta, <a href="/login">iniciá sesión</a></p>
+        <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/login">iniciá sesión</a></p>
         <form action="/" method="POST" class="register">
         <div class="formbox">
             <div class="primeralinea">
@@ -99,7 +101,7 @@
             <ul type="none">
                 <li>Atención al cliente</li>
                 <li>Devoluciones</li>
-                <li><a href="https://www.buenosaires.gob.ar/defensaconsumidor/direccion-general">Defensa del consumidor</a></li>
+                <li><a href="https://www.buenosaires.gob.ar/defensaconsumidor/direccion-general" target="_blank">Defensa del consumidor</a></li>
             </ul>
         </section>
     </article>
