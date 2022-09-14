@@ -7,5 +7,9 @@ router.get('/', mainController.home);
 router.get('/register', mainController.register);
 router.get('/login', mainController.login);
 router.get('/carrito', mainController.carrito);
+router.get('/quienes-somos', mainController.quienes);
+router.get('/nuestra-historia', mainController.historia);
+router.get('/terminos', mainController.terminos);
+router.get('/politica-de-privacidad', mainController.politica);
 
 module.exports = router;
