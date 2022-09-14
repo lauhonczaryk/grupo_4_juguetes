@@ -11,6 +11,18 @@ const controller = {
     register: function (req, res) {
         res.render('register');
     },
+    politica: function (req, res) {
+        res.render('politica-de-privacidad');
+    },
+    terminos: function (req, res) {
+        res.render('terminos');
+    },
+    quienes: function (req, res) {
+        res.render('quienes-somos');
+    },
+    historia: function (req, res) {
+        res.render('nuestra-historia');
+    }
 }
 
 module.exports = controller;
