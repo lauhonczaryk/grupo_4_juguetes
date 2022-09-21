@@ -13,6 +13,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/', indexRouter);
 
+app.use((req, res, next)=> {
+    res.status(404).render('not-found')
+})
 app.listen(3000, () =>{
     console.log('Servidor corriendo');
 })
