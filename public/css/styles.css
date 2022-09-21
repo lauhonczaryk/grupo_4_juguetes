@@ -355,6 +355,14 @@ footer img{
 .copyright p {
     text-align: center;
 }
+/* ERROR 404 */
+.error404 {
+    background-color: #FFE200;
+}
+.notfound, .error{
+text-align: center;
+text-decoration: solid;
+}
 
 /* MEDIA QUERIES */
 
