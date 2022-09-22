@@ -1,33 +1,37 @@
-[{
-    "id": 1,
-    "name": "Monopoly",
-    "price": 7000,
-    "category": "Juego de Mesa",
-    "description": "¡Un clásico! Reuní a tus amistades para disfrutar de horas de risas y diversión mientras juegan a ser agentes inmobiliarios con el Monopoly. Deberán comprar, vender e intercambiar propiedades estratégicamente para aumentar sus fortunas, si te declarás en quiebra... ¡perdiste!"
-    
-   },
-   {
-    "id": 2,
-    "name": "PlayStation 5",
-    "price": 250000,
-    "category": "Video Juegos",
-    "description": "PlayStation renovó las expectativas del mundo virtual con esta nueva consola y su gran rendimiento. Cuenta con una interfaz de usuario más rápida y fácil de navegar que en anteriores modelos. Además, podrás jugar durante horas desafiando a millones de contrincantes alrededor del mundo que esperan nuevos retos."
-    
-   },
-   {
-    "id": 3,
-    "name": "Señor Cara de Papa",
-    "price": 3000,
-    "category": "Figura de Acción",
-    "description": "La empresa Hasbro es la propietaria de diferentes marcas, juguetes y juegos de mesa. Desde 1923 se dedica a crear y contagiar felicidad con sus productos."
-    
-   },
-   {
-    "id": 4,
-    "name": "Juego de cartas UNO",
-    "price": 1000,
-    "category": "Juego de Mesa",
-    "description": "¿El rey de los juegos rompe amistades? Definitivamente el Uno. Disfrutá de tardes a pura risa y venganza despiadada entre amigos y amigas. Tendrás que quedarte sin cartas antes que los demás y cuando solo tengas una ¡no te olvides de decir UNO!"
-    
-   }
+[
+     {
+          "id": 1,
+          "name": "Monopoly",
+          "price": 7000,
+          "category": "Juego de Mesa",
+          "description": "¡Un clásico! Reuní a tus amistades para disfrutar de horas de risas y diversión mientras juegan a ser agentes inmobiliarios con el Monopoly. Deberán comprar, vender e intercambiar propiedades estratégicamente para aumentar sus fortunas, si te declarás en quiebra... ¡perdiste!"
+     },
+     {
+          "id": 2,
+          "name": "PlayStation 5",
+          "price": 250000,
+          "category": "Video Juegos",
+          "description": "PlayStation renovó las expectativas del mundo virtual con esta nueva consola y su gran rendimiento. Cuenta con una interfaz de usuario más rápida y fácil de navegar que en anteriores modelos. Además, podrás jugar durante horas desafiando a millones de contrincantes alrededor del mundo que esperan nuevos retos."
+     },
+     {
+          "id": 3,
+          "name": "Señor Cara de Papa",
+          "price": 3000,
+          "category": "Figura de Acción",
+          "description": "La empresa Hasbro es la propietaria de diferentes marcas, juguetes y juegos de mesa. Desde 1923 se dedica a crear y contagiar felicidad con sus productos."
+     },
+     {
+          "id": 4,
+          "name": "Juego de cartas UNO",
+          "price": 1000,
+          "category": "Juego de Mesa",
+          "description": "¿El rey de los juegos rompe amistades? Definitivamente el Uno. Disfrutá de tardes a pura risa y venganza despiadada entre amigos y amigas. Tendrás que quedarte sin cartas antes que los demás y cuando solo tengas una ¡no te olvides de decir UNO!"
+     },
+     {
+          "id": 5,
+          "name": "Pictionary",
+          "price": "5000",
+          "category": "Juago de Mesa",
+          "description": "¡Llegó el momento de revelar quién es un verdadero artista! Con el Pictionary las risas están aseguradas: tendrás que ser creativo y dibujar lo más rápido posible para que el equipo adivine la palabra y alcance la meta; tan solo necesitás papel, lápiz y ¡mucha imaginación!"
+     }
 ]
