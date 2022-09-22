@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %> 
+    <title>Carrito de compras</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+    <h2 style="margin: 80px; text-align: center;">Listado de Productos</h2>
+   
+    <% products.forEach(function(producto) { %> 
+    <article>
+    <h3 style="margin: 80px; text-align: center;">Informacion del Producto:</h3>
+    <ul style="margin: 80px; text-align: center; list-style-type:none">
+        <li>
+            Nombre: <%- producto.name %>
+        </li>
+        <li>
+            Categoría: <%- producto.category %>
+        </li>
+        <li>
+            Descripción: <%- producto.description %>
+        </li>
+        <li>
+            Precio: <%- producto.price %> $
+        </li>
+    </ul>
+    </article>
+    <%  }) %>    
+    
+    <%- include('./partials/footer.ejs') %> 
+
+</body>
+</html>
