@@ -1,17 +1,31 @@
+
+// ************ Require's ************
+
 const express = require('express');
-
+const path = require('path');
+const methodOverride =  require('method-override');
+//Requerimos nuestros archivos de rutas
 const indexRouter = require('./routes/index');
+const productRouter = require('./routes/productRouter');
 
+// ************ express() - (don't touch) ************
 const app = express();
 
-const path = require('path');
+// ************ Middlewares - (don't touch) ************
 
-app.set('views', path.join(__dirname, "./views"));
+app.use(express.static(path.join(__dirname, "public"))); //definimos carpeta donde estan nuestros recursos estaticos
+app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false })); //define la forma que nos llega la info de los formularios, va siempre
+app.use(express.json());
+
+
+
+// ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
-
-app.use(express.static(path.join(__dirname, "public")));
-
-app.use('/', indexRouter);
+app.set('views', path.join(__dirname, "./views"));
+//Rutas van siempre al final
+app.use('/', indexRouter); // Rutas para el main
+app.use('/products', productRouter); // Rutas referidas a productos
 
 app.use((req, res, next)=> {
     res.status(404).render('not-found')
