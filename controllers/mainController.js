@@ -22,7 +22,11 @@ const controller = {
     },
     historia: function (req, res) {
         res.render('nuestra-historia');
+    },
+    crear: function (req, res) {
+        res.render('create');
     }
+    
 }
 
 module.exports = controller;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs') %> 
+    <title>Registro</title>
+</head>
+
+<body>
+    <div class="ofertasfixed">
+        <i class="fas fa-fire">OFERTAS del día!</i>
+    </div>
+    <div class="cartel-contenedor">
+        <div class="cartelfixed">
+            <p>Con tu compra superior a $7500, tenés envío gratis</p>
+        </div>
+    </div>
+    <%- include('./partials/header.ejs') %> 
+    
+       
+        <section class="main-form">
+            <h2 style="margin: 20px;">Agregar Producto</h2>
+            
+            <form action="/" method="POST" class="register">
+            <div class="formbox">
+                <div class="primeralinea">
+                    <input type="text" name="nombreProducto" id="nombreApellido" placeholder="Producto" required>
+                </div>
+                <div class="segundalinea">
+                    <input type="text" name="descripcionProducto" id="nombreApellido" placeholder="Descripción" required>
+                </div>
+                <div class="terceralinea">
+                    <input type="text" name="nombreApellido" id="nombreApellido" placeholder="Imagen" required>
+                </div>
+                <div class="cuartalinea">
+                    <input type="text" name="categoriaProducto" id="nombreApellido" placeholder="Categoría" required>
+                </div>
+                <div class="quintalinea">
+                    <input type="text" name="deta" id="nombreApellido" placeholder="Color/Talle/Tamaño" required>
+                </div>
+                <div class="sextalinea">
+                    <input type="text" name="nombreApellido" id="nombreApellido" placeholder="Precio" required>
+                </div>
+            </div>
+            <div class="caja-boton">
+               <button  type="submit" class="boton-submit">Agregar</button>
+            </div>
+            </form>
+    </section>
+
+
+
+
+
+
+        
+</section>
+</body>
+<%- include('./partials/footer.ejs') %> 
+</html>
