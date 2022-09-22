@@ -25,7 +25,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, "./views"));
 //Rutas van siempre al final
 app.use('/', indexRouter); // Rutas para el main
-app.use('/products', productRouter); // Rutas referidas a productos
+app.use('/productos', productRouter); // Rutas referidas a productos
 
 app.use((req, res, next)=> {
     res.status(404).render('not-found')

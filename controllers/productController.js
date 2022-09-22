@@ -18,6 +18,13 @@ const productController = {
     list: function (req, res) {
         const data = findAll()
         res.render('menu-products', { products: data}); // dentro de la ruta mando un objeto "products" con data adentro
+    },
+    detail: function (req, res) {
+        const data = findAll();
+        const productoEncontrado = data.find(function(producto) {
+           return producto.id == req.params.id
+        });
+        res.render('product-detail', { products: productoEncontrado });
     }
 }
 
