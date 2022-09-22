@@ -11,5 +11,6 @@ router.get('/quienes-somos', mainController.quienes);
 router.get('/nuestra-historia', mainController.historia);
 router.get('/terminos', mainController.terminos);
 router.get('/politica-de-privacidad', mainController.politica);
+router.get('/crear', mainController.crear);
 
 module.exports = router;
