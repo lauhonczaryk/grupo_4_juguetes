@@ -34,13 +34,14 @@ const productController = {
     },
     store: function (req, res){
         const data = findAll()
-        
+        console.log(req.file);
         const newProduct = {
             id: data.length + 1, //Cuenta cuantos elementos hay en la lista y le suma 1
             name: req.body.name,
             price: req.body.price, 
             category: req.body.category,
             description: req.body.description,
+            image: req.file.filename, // dentro de la propiedad .file nos llega los datos del archivo que subimos
         }
          data.push(newProduct); //Le agrego el nuevo product al data
         writeFile(data);
