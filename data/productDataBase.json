@@ -30,8 +30,16 @@
      {
           "id": 5,
           "name": "Pictionary",
-          "price": "5000",
+          "price": "5001",
           "category": "Juago de Mesa",
           "description": "¡Llegó el momento de revelar quién es un verdadero artista! Con el Pictionary las risas están aseguradas: tendrás que ser creativo y dibujar lo más rápido posible para que el equipo adivine la palabra y alcance la meta; tan solo necesitás papel, lápiz y ¡mucha imaginación!"
+     },
+     {
+          "id": 6,
+          "name": "Hot Wheels",
+          "price": "2990",
+          "category": "Juguete Niño",
+          "description": "Super Pista!",
+          "image": "productImage1663966416376-.png"
      }
 ]
