@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, "public"))); //definimos carpeta don
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false })); //define la forma que nos llega la info de los formularios, va siempre
 app.use(express.json());
-
+ 
 
 
 // ************ Template Engine - (don't touch) ************
