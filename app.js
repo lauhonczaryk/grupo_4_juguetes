@@ -27,9 +27,10 @@ app.use('/', indexRouter); // Rutas para el main
 app.use('/productos', productRouter); // Rutas referidas a productos
 app.use('/users', userRouter); // Rutas referidas a usuarios
 
-app.use((req, res, next)=> {
-    res.status(404).render('not-found')
-})
+// ERROR 404 - comentado para poder trabajar con errores de formularios
+// app.use((req, res, next)=> {
+//     res.status(404).render('not-found')
+// })
 
 app.listen(3000, () =>{
     console.log('Servidor corriendo');

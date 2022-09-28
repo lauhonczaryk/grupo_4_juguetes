@@ -19,21 +19,21 @@
     <section class="main-form">
         <h2 style="margin: 20px;">Creá tu cuenta</h2>
         <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/login">iniciá sesión</a></p>
-        <form action="/user/register" method="POST" class="register">
-        <div class="formbox">
-            <div class="primeralinea">
-                <input type="text" name="nombreApellido" id="nombreApellido" placeholder="Nombre y apellido" required>
-                <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" required>
+        <form method="POST" action="/user/register" class="register">
+            <div class="formbox">
+                <div class="primeralinea">
+                    <input type="text" name="nombreApellido" id="nombreApellido" placeholder="Nombre y apellido">
+                    <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+                </div>
+                <div class="segundalinea">
+                    <input type="mail" name="mail" id="mail" placeholder="e-mail">
+                </div>
+                <div class="terceralinea">
+                    <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+                    <input type="password" name="confirmacionContraseña" id="confirmacionContraseña"
+                        placeholder="Confirmar contraseña">
+                </div>
             </div>
-            <div class="segundalinea">
-                <input type="mail" name="mail" id="mail" placeholder="e-mail">
-            </div>
-            <div class="terceralinea">
-                <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-                <input type="password" name="confirmacionContraseña" id="confirmacionContraseña"
-                    placeholder="Confirmar contraseña">
-            </div>
-        </div>
         <div class="caja-boton">
            <button  type="submit" class="boton-submit">Enviar</button>
         </div>
