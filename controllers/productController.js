@@ -41,6 +41,7 @@ const productController = {
             price: req.body.price, 
             category: req.body.category,
             description: req.body.description,
+            color: req.body.color,
             image: req.file.filename, // dentro de la propiedad .file nos llega los datos del archivo que subimos
         }
          data.push(newProduct); //Le agrego el nuevo product al data
@@ -65,9 +66,10 @@ const productController = {
         });
         
         productoEncontrado.name = req.body.name;
-        productoEncontrado. price = req.body.price;
-        productoEncontrado. description = req.body.description;
-        productoEncontrado. category = req.body.category;
+        productoEncontrado.price = req.body.price;
+        productoEncontrado.description = req.body.description;
+        productoEncontrado.category = req.body.category;
+        productoEncontrado.color = req.body.color;
         writeFile(data);
        
 

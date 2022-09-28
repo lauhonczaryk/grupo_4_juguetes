@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
   const upload = multer({ storage: storage }); // Defino la variable upload que despues le voy aplicar el .single dentro de la ruta POST
 
 
-/* Rutas dentro de /products/... */
+/* Rutas dentro de /productos/... */
 
 router.get('/listar', productController.list);
 router.get('/crear', productController.crear);
