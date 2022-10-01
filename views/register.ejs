@@ -17,24 +17,45 @@
     </div>
     <%- include('./partials/header.ejs') %> 
     <section class="main-form">
-        <% if (locals.errors) { %>
+        <!-- MOSTRAR ERRORES -->
+        <!-- <% if (locals.errors) { %>
             <% for( let oneError in errors ) { %>
                 <p> <%= errors[oneError].msg %> </p>
             <% } %>
-        <% } %> 
+        <% } %>  -->
         <h2 style="margin: 20px;">Creá tu cuenta</h2>
         <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/login">iniciá sesión</a></p>
         <form method="POST" action="/user/register" class="register">
             <div class="formbox">
                 <div class="primeralinea">
-                    <input type="text" name="nombreApellido" id="nombreApellido" placeholder="Nombre y apellido">
-                    <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+                    <input type="text" name="nombreApellido" id="nombreApellido" placeholder="Nombre y apellido" class="<%= locals.errors && errors.nombreApellido ? "is-invalid" : null %>">
+                    <% if (locals.errors && errors.nombreApellido) { %>
+                            <div style="color: red;">
+                                <%= errors.nombreApellido.msg %> 
+                            </div>
+                    <% } %>
+                    <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario" class="<%= locals.errors && errors.usuario ? "is-invalid" : null %>">
+                    <% if (locals.errors && errors.usuario) { %>
+                        <div style="color: red;">
+                            <%= errors.usuario.msg %> 
+                        </div>
+                    <% } %>
                 </div>
                 <div class="segundalinea">
-                    <input type="email" name="email" id="email" placeholder="e-mail">
+                    <input type="email" name="email" id="email" placeholder="e-mail" class="<%= locals.errors && errors.email ? "is-invalid" : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div style="color: red;">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
                 </div>
                 <div class="terceralinea">
-                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" class="<%= locals.errors && errors.password ? "is-invalid" : null %>">
+                    <% if (locals.errors && errors.password) { %>
+                        <div style="color: red;">
+                            <%= errors.password.msg %> 
+                        </div>
+                    <% } %>
                     <!-- <input type="password" name="confirmPassword" id="confirmPassword"
                         placeholder="Confirmar contraseña"> -->
                 </div>
