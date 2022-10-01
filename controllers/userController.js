@@ -1,9 +1,17 @@
+const { validationResult } = require('express-validator');
+
 const controller = {
     register: function (req, res) {
-        res.render('register');
+        return res.render('register');
     },
     processRegister: function (req, res) {
-        return res.send('OK, viniste por post');
+        const resultValidation = validationResult(req);
+
+        if (resultValidation.errors.length > 0){
+            return res.render('register', {
+                errors: resultValidation.mapped(),
+            });
+        }
     },
     login: function (req, res) {
         res.render('login');

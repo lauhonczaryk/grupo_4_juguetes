@@ -17,6 +17,11 @@
     </div>
     <%- include('./partials/header.ejs') %> 
     <section class="main-form">
+        <% if (locals.errors) { %>
+            <% for( let oneError in errors ) { %>
+                <p> <%= errors[oneError].msg %> </p>
+            <% } %>
+        <% } %>
         <h2 style="margin: 20px;">Creá tu cuenta</h2>
         <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/login">iniciá sesión</a></p>
         <form method="POST" action="/user/register" class="register">
@@ -26,12 +31,12 @@
                     <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
                 </div>
                 <div class="segundalinea">
-                    <input type="mail" name="mail" id="mail" placeholder="e-mail">
+                    <input type="email" name="email" id="email" placeholder="e-mail">
                 </div>
                 <div class="terceralinea">
-                    <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
-                    <input type="password" name="confirmacionContraseña" id="confirmacionContraseña"
-                        placeholder="Confirmar contraseña">
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <!-- <input type="password" name="confirmPassword" id="confirmPassword"
+                        placeholder="Confirmar contraseña"> -->
                 </div>
             </div>
         <div class="caja-boton">

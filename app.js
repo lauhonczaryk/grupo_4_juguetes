@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, "./views"));
 //Rutas van siempre al final
 app.use('/', indexRouter); // Rutas para el main
 app.use('/productos', productRouter); // Rutas referidas a productos
-app.use('/users', userRouter); // Rutas referidas a usuarios
+app.use('/user', userRouter); // Rutas referidas a usuarios
 
 // ERROR 404 - comentado para poder trabajar con errores de formularios
 // app.use((req, res, next)=> {
