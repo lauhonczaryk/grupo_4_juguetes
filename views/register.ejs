@@ -33,7 +33,7 @@
                         name="nombreApellido" 
                         id="nombreApellido" 
                         placeholder="Nombre y apellido" 
-                        class="<%= locals.errors && errors.nombreApellido ? "is-invalid" : null %>" 
+                        class="<%= locals.errors && errors.nombreApellido ? "is-invalid" : null %> izquierda" 
                         value="<%= locals.oldData ? oldData.nombreApellido : null %>"
                     >
                     <% if (locals.errors && errors.nombreApellido) { %>
@@ -46,7 +46,7 @@
                         name="usuario" 
                         id="usuario" 
                         placeholder="Nombre de usuario" 
-                        class="<%= locals.errors && errors.usuario ? "is-invalid" : null %>"
+                        class="<%= locals.errors && errors.usuario ? "is-invalid" : null %> derecha"
                         value="<%= locals.oldData ? oldData.usuario : null %>"
                     >
                     <% if (locals.errors && errors.usuario) { %>

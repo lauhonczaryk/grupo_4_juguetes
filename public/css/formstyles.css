@@ -18,12 +18,10 @@ p {
 }
 
 .register input {
-    background-color: gainsboro;
+    /* background-color: gainsboro; */
     border: 1px solid black;
     border-radius: 10px;
     padding: 10px;
-    margin: 20px;
-
     text-align: center;
     align-items: center;
 }
@@ -35,16 +33,52 @@ p {
     color: black;
 }
 
-.login .primeralinea {
-width: 80%;
+.primeralinea {
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
-.primeralinea input, .terceralinea input {
-    width: 40%;
+.segundalinea {
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.terceralinea {
+    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.primeralinea input {
+    width: 50%;
 }
 
 .segundalinea input {
-        width: 86%;
+    width: 100%;
+}
+
+.terceralinea input {
+    width: 100%;
+}
+
+.izquierda {
+    margin-right: 10px;
+}
+
+.derecha {
+    margin-left:  10px;
 }
 
 .caja-boton {

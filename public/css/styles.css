@@ -196,11 +196,18 @@ div.burger-menu i{
     margin-left: 10px;
 }
 
-.botones-nav{
+.botones-nav {
     margin: 20px;
 }
 
-.button-cart{
+.boton-carrito {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.button-cart {
     display: none;
     background-color: #FFE200;
     padding: 10px;
