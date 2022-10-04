@@ -50,6 +50,7 @@ main {
     margin-bottom: 20px;
     text-align: center;
     font-size: 13px;
+    z-index: 2;
 }
 
 .cartelfixed p {
