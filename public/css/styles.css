@@ -411,6 +411,12 @@ text-decoration: solid;
     }
 }
 
+@media (min-width: 1100px) {
+    #slider1_container{
+        height: 400px!important;
+    }
+}
+
 .jssorl-009-spin img {
     animation-name: jssorl-009-spin;
     animation-duration: 1.6s;
