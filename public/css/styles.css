@@ -271,7 +271,7 @@ div.burger-menu i{
     justify-content: center;
     width: 200px;
     height: 200px;
-    background-color: #F41809;
+    background-color: #e26057;
     border-radius: 50%;
     transition: 200ms;
 }
@@ -282,7 +282,7 @@ div.burger-menu i{
     justify-content: center;
     width: 200px;
     height: 200px;
-    background-color:#00B212;
+    background-color:#69e575;
     border-radius: 50%;
     transition: 200ms;
 }
@@ -293,7 +293,7 @@ div.burger-menu i{
     justify-content: center;
     width: 200px;
     height: 200px;
-    background-color:#0000DD;
+    background-color:#4b69bd;
     border-radius: 50%;
     transition: 200ms;
 }
@@ -304,7 +304,7 @@ div.burger-menu i{
     justify-content: center;
     width: 200px;
     height: 200px;
-    background-color:#FFE200;
+    background-color:#e1d159;
     border-radius: 50%;
     transition: 200ms;
 }
