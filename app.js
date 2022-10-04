@@ -3,6 +3,7 @@
 const express = require('express');
 const path = require('path');
 const methodOverride =  require('method-override');
+const session = require('express-session');
 
 //Requerimos nuestros archivos de rutas
 const indexRouter = require('./routes/index');
@@ -18,6 +19,7 @@ app.use(express.static(path.join(__dirname, "public"))); //definimos carpeta don
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false })); //define la forma que nos llega la info de los formularios, va siempre
 app.use(express.json());
+app.use(session( {secret: "Nuestro mensaje secreto"}));
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
