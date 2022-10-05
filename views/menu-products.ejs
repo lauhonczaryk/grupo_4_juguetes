@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
     <%- include('./partials/head.ejs') %> 
-    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="/css/prepusheooo.css">
+    <title>Listado de productos</title>
 </head>
 <body>
-    <%- include('./partials/header.ejs') %> 
+       <%- include('./partials/header.ejs') %> 
+      
     <h2>Listado de Productos</h2>
-   
+    <div class="box-allproducts">
     <% products.forEach(function(producto) { %> 
     <div class="box-product">
-    <h3><%- producto.name %></h3>
-    <div> 
-        <img class="image" src="/images/products-img/<%= producto.image || "producto-sin-foto.jpeg" %>" >
+    <h3 class="name"><%- producto.name %></h3>
+    <div class="imagelistar"> 
+        <img src="/images/products-img/<%= producto.image || "producto-sin-foto.jpeg" %>" >
     </div>
     <ul class="menu-products" style="list-style: none">
          <li class="price" >
-         <%- producto.price %> $
+         $<%- producto.price %> 
         </li> 
         <li class="description">
          <%- producto.description %>
@@ -28,10 +30,11 @@
             Id: <%- producto.id %>
         </li> 
     </ul>
+    <a  href="/carrito"><p class="add-cart">Agregar al carrito</p></a>
     </div>
     <%  }) %>    
     
     <%- include('./partials/footer.ejs') %> 
-
+    </div>
 </body>
 </html>
