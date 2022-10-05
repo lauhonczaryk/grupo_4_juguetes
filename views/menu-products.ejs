@@ -9,12 +9,12 @@
     <h2>Listado de Productos</h2>
    
     <% products.forEach(function(producto) { %> 
-    <article>
+    <div class="box-product">
     <h3><%- producto.name %></h3>
     <div> 
-        <img src="/images/products-img/<%= producto.image || "producto-sin-foto.jpeg" %>" >
+        <img class="image" src="/images/products-img/<%= producto.image || "producto-sin-foto.jpeg" %>" >
     </div>
-    <ul class="menu-products">
+    <ul class="menu-products" style="list-style: none">
          <li class="price" >
          <%- producto.price %> $
         </li> 
@@ -28,7 +28,7 @@
             Id: <%- producto.id %>
         </li> 
     </ul>
-    </article>
+    </div>
     <%  }) %>    
     
     <%- include('./partials/footer.ejs') %> 
