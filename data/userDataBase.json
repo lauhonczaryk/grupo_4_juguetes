@@ -1,0 +1,52 @@
+[
+    {
+         "id": 1,
+         "name": "Juan",
+         "last-name": "Gonella",
+         "password": "123456",
+         "category": "admin",
+         "email": "gonellapol@hotmail.com"
+    },
+    {
+        "id": 2,
+        "name": "Laura",
+        "last-name": "Honczaryk",
+        "password": "123456",
+        "category": "admin",
+        "email": "lauhonczaryk@gmail.com"
+   },
+   {
+    "id": 3,
+    "name": "Patricio",
+    "last-name": "Maldonado",
+    "password": "123456",
+    "category": "admin",
+    "email": "pmaldonado@gmail.com"
+    },
+    {
+        "id": 4,
+        "name": "Augusto",
+        "last-name": "Maldonado",
+        "password": "123456",
+        "category": "admin",
+        "email": "amaldonado@gmail.com"
+    },
+    {
+        "id": 5,
+        "name": "Jorge",
+        "last-name": "Gomez",
+        "password": "jgomez",
+        "category": "guest",
+        "email": "jgomez@gmail.com"
+    },
+    {
+        "id": 6,
+        "name": "Mario",
+        "last-name": "Sanchez",
+        "password": "Hola1234",
+        "category": "guest",
+        "email": "msanchez@gmail.com"
+    }
+
+   
+]
