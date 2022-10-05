@@ -30,5 +30,12 @@
   "password": "holquetal123",
   "country": "Argentina",
   "avatar": "Anuel.png"
+ },
+ {
+  "id": 5,
+  "nombreApellido": "Patrick",
+  "usuario": "Maldonado",
+  "email": "patomaldonado99@gmail.com",
+  "password": "$2a$10$kWE0YUurxPRggY1BrUx3reJ.KrqZMg90DlRhf2PS85/hgH5nNQruy"
  }
 ]

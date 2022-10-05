@@ -22,7 +22,7 @@
         <form action="/user/login" method="POST" class="register">
             <div class="formbox">
                 <div class="segundalinea">
-                    <input style="width: 94%" type="text" name="usuario" id="usuario" placeholder="e-mail o Nombre de usuario" required>
+                    <input style="width: 94%" type="text" name="email" id="email" placeholder="e-mail o Nombre de usuario">
                     <% if (locals.errors && errors.email) { %>
                         <div style="color: red;">
                             <%= errors.email.msg %> 
@@ -30,7 +30,7 @@
                     <% } %>
                 </div>
                 <div class="terceralinea">
-                    <input style="width: 94%" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
+                    <input style="width: 94%" type="password" name="password" id="password" placeholder="Contraseña">
                 </div>
             </div>
             <div class="caja-boton">
