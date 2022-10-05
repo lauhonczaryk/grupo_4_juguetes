@@ -6,32 +6,29 @@
 </head>
 <body>
     <%- include('./partials/header.ejs') %> 
-    <h2 style="margin: 80px; text-align: center;">Listado de Productos</h2>
+    <h2>Listado de Productos</h2>
    
     <% products.forEach(function(producto) { %> 
-    <article>
-    <h3 style="margin: 80px; text-align: center;">Informacion del Producto:</h3>
-    <div align = center> 
-        <img src="/images/products-img/<%= producto.image || "producto-sin-foto.jpeg" %>" >
+    <div class="box-product">
+    <h3><%- producto.name %></h3>
+    <div> 
+        <img class="image" src="/images/products-img/<%= producto.image || "producto-sin-foto.jpeg" %>" >
     </div>
-    <ul class="listaproduct" style="margin: 80px; text-align: center; list-style-type:none">
-        <li>
+    <ul class="menu-products" style="list-style: none">
+         <li class="price" >
+         <%- producto.price %> $
+        </li> 
+        <li class="description">
+         <%- producto.description %>
+        </li>
+        <li class="category">
+           Categoría: <%- producto.category %>
+        </li>
+        <li class="idlistar" >
             Id: <%- producto.id %>
-        </li>
-        <li>
-            Nombre: <%- producto.name %>
-        </li>
-        <li>
-            Categoría: <%- producto.category %>
-        </li>
-        <li>
-            Descripción: <%- producto.description %>
-        </li>
-        <li>
-            Precio: <%- producto.price %> $
-        </li>
+        </li> 
     </ul>
-    </article>
+    </div>
     <%  }) %>    
     
     <%- include('./partials/footer.ejs') %> 

@@ -1,0 +1,19 @@
+.box-product{
+    margin: 30px;
+    padding: 20px;
+    box-shadow: #000;
+    width: 300px;
+    
+}
+.price{
+    text-align: right;
+    font-size: 50px;
+    text-decoration: solid;
+    color: #00B212;
+}
+.description {
+text-align: justify;
+}
+.image{
+   align-content: center;
+}
