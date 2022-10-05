@@ -29,7 +29,7 @@ const controller = {
             });
         }
 
-        userToCreate = {
+        let userToCreate = {
             ...req.body,
             password: bcryptjs.hashSync(req.body.password, 10)
         }
@@ -40,6 +40,24 @@ const controller = {
     },
     login: function (req, res) {
         res.render('login');
+    },
+    loginProcess: function(req, res){
+        let userToLogin = User.findByField('email', req.body.email);
+
+        if(userToLogin){
+            let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if(passwordOk){
+                return res.send('Ok, podes ingresar capo');
+            }
+        }
+
+        res.render('login', {
+            errors: {
+                email: {
+                    msg: 'Este correo no existe'
+                }
+            }
+        });
     },
     profile: function (req, res) {
         res.render('userProfile');

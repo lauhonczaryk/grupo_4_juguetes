@@ -19,10 +19,15 @@
     <section class="main-form">
         <h2 style="margin: 20px;">Iniciá sesión</h2>
         <p style="margin: 10px;">Si todavía no tenés cuenta, <a class="boton-opuesto" href="/user/register">Registrate</a></p>
-        <form action="/loguearlo" method="POST" class="register">
+        <form action="/user/login" method="POST" class="register">
             <div class="formbox">
                 <div class="segundalinea">
                     <input style="width: 94%" type="text" name="usuario" id="usuario" placeholder="e-mail o Nombre de usuario" required>
+                    <% if (locals.errors && errors.email) { %>
+                        <div style="color: red;">
+                            <%= errors.email.msg %> 
+                        </div>
+                    <% } %>
                 </div>
                 <div class="terceralinea">
                     <input style="width: 94%" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
