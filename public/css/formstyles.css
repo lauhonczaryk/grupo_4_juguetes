@@ -39,30 +39,46 @@ p {
     align-content: center;
     flex-wrap: nowrap;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .segundalinea {
     padding: 20px;
     display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: center;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
 .terceralinea {
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-form-left{
+    display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.div-form-right{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .primeralinea input {
-    width: 50%;
+    width: 100%;
 }
 
 .segundalinea input {

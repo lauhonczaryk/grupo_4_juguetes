@@ -13,6 +13,8 @@ const controller = {
                 oldData: req.body
             });
         }
+
+        res.send('Ok, no hay errores!')
     },
     login: function (req, res) {
         res.render('login');
