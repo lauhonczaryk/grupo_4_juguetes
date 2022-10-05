@@ -30,12 +30,5 @@
   "password": "holquetal123",
   "country": "Argentina",
   "avatar": "Anuel.png"
- },
- {
-  "id": 5,
-  "nombreApellido": "Franco Maldonado",
-  "usuario": "franco",
-  "email": "franco@gmail.com",
-  "password": "franco"
  }
 ]
