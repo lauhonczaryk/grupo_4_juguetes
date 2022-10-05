@@ -2,29 +2,35 @@
 <html lang="en">
 <head>
     <%- include('./partials/head.ejs') %> 
-    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="/css/prepusheooo.css">
+    <title>Detalle de producto</title>
 </head>
 <body>
     <%- include('./partials/header.ejs') %> 
-    <h2 style="margin: 80px; text-align: center;">Listado de Productos</h2>
-    
-        <article>
-        <h3 style="margin: 80px; text-align: center;">Informacion del Producto:</h3>
-        <ul style="margin: 80px; text-align: center; list-style-type:none">
-            <li>
-                Nombre: <%- products.name %>
+       
+        <div class="box-product-detail">
+        <div class="box1">
+            <p class="category-detail">Categoría / Juguetes / <%- products.category %></p>
+        <img class="image-detail" src="/images/products-img/producto-sin-foto.jpeg">
+    </div>
+    <div class="box2">
+        <ul style="list-style-type:none">
+            <li class="name-detail">
+                <%- products.name %>
             </li>
-            <li>
-                Categoría: <%- products.category %>
+            <li class="price-detail">
+                <%- products.price %> $
             </li>
-            <li>
-                Descripción: <%- products.description %>
-            </li>
-            <li>
-                Precio: <%- products.price %> $
-            </li>
+            <li class="description-detail">
+                <%- products.description %>
+            </li>      
+            <li class="vermas">
+                + ver más
+            </li>  
         </ul>
-        </article>
+        <a  href="/carrito"><p class="add-cart">Agregar al carrito</p></a>
+    </div>
+    </div>
             
         
    
