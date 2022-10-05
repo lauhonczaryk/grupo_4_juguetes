@@ -1,5 +1,7 @@
 const { validationResult } = require('express-validator');
 
+const User = require('../models/User');
+
 const controller = {
     register: function (req, res) {
         return res.render('register');
@@ -14,7 +16,9 @@ const controller = {
             });
         }
 
-        res.send('Ok, no hay errores!')
+        User.create(req.body);
+
+        res.send('Ok, se guardo el usuario!')
     },
     login: function (req, res) {
         res.render('login');

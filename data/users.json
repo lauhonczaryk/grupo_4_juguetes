@@ -1,0 +1,41 @@
+[
+ {
+  "id": 1,
+  "fullName": "Patricio",
+  "email": "patriciomaldonado@gmail.com",
+  "password": "holquetal123",
+  "country": "Argentina",
+  "avatar": "patricio.png"
+ },
+ {
+  "id": 2,
+  "fullName": "Luciano",
+  "email": "luciano@gmail.com",
+  "password": "holquetal123",
+  "country": "Argentina",
+  "avatar": "Luciano.png"
+ },
+ {
+  "id": 3,
+  "fullName": "Alex",
+  "email": "alex@gmail.com",
+  "password": "holquetal123",
+  "country": "Argentina",
+  "avatar": "Alex.png"
+ },
+ {
+  "id": 4,
+  "fullName": "Anuel",
+  "email": "anuel@gmail.com",
+  "password": "holquetal123",
+  "country": "Argentina",
+  "avatar": "Anuel.png"
+ },
+ {
+  "id": 5,
+  "nombreApellido": "Franco Maldonado",
+  "usuario": "franco",
+  "email": "franco@gmail.com",
+  "password": "franco"
+ }
+]
