@@ -31,30 +31,30 @@
                     <div class="div-form-left">
                         <input 
                             type="text" 
-                            name="nombreApellido" 
-                            id="nombreApellido" 
+                            name="fullName" 
+                            id="fullName" 
                             placeholder="Nombre y apellido" 
-                            class="<%= locals.errors && errors.nombreApellido ? "is-invalid" : null %> izquierda" 
-                            value="<%= locals.oldData ? oldData.nombreApellido : null %>"
+                            class="<%= locals.errors && errors.fullName ? "is-invalid" : null %> izquierda" 
+                            value="<%= locals.oldData ? oldData.fullName : null %>"
                         >
-                        <% if (locals.errors && errors.nombreApellido) { %>
+                        <% if (locals.errors && errors.fullName) { %>
                                 <div style="color: red;">
-                                    <%= errors.nombreApellido.msg %> 
+                                    <%= errors.fullName.msg %> 
                                 </div>
                         <% } %>
                     </div>
                     <div class="div-form-right">
                         <input 
                             type="text" 
-                            name="usuario" 
-                            id="usuario" 
+                            name="userName" 
+                            id="userName" 
                             placeholder="Nombre de usuario" 
-                            class="<%= locals.errors && errors.usuario ? "is-invalid" : null %> derecha"
-                            value="<%= locals.oldData ? oldData.usuario : null %>"
+                            class="<%= locals.errors && errors.userName ? "is-invalid" : null %> derecha"
+                            value="<%= locals.oldData ? oldData.userName : null %>"
                         >
-                        <% if (locals.errors && errors.usuario) { %>
+                        <% if (locals.errors && errors.userName) { %>
                             <div style="color: red;">
-                                <%= errors.usuario.msg %> 
+                                <%= errors.userName.msg %> 
                             </div>
                         <% } %>
                     </div>

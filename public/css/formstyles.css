@@ -133,3 +133,46 @@ p {
 .boton-opuesto:hover {
     text-decoration: underline;
 }
+
+/* checkbox */
+
+.div-checkbox {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.checkbox-input {
+    display: none;
+} 
+
+.checkbox-box {
+    width: 1.25em;
+    height: 1.25em;
+    border: 2px solid #929292;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    flex-shrink: 0;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.checkbox-box::after{
+    content: '\2714';
+    color: #ffffff;
+}
+
+.checkbox-input:checked +.checkbox-box {
+    background: #2266dc;
+    border-color: #2266dc;
+}

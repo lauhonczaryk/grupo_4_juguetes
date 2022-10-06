@@ -15,7 +15,7 @@
                 <a class="boton-login" href="/user/login">Inicio Sesión</a>
                 <% } else { %> 
                 <a class="boton-registro" href="/user/logout">Cerrar Sesión</a>
-                <a class="boton-registro" href="/user/profile">Perfil: <%= locals.userLogged.nombreApellido %> </a>
+                <a class="boton-registro" href="/user/profile">Perfil: <%= locals.userLogged.fullName %> </a>
                 <% } %> 
             </div>
         </nav>
