@@ -39,17 +39,17 @@ const controller = {
         res.redirect('/user/login');
     },
     login: function (req, res) {
-        console.log(req.session);
         res.render('login');
     },
     loginProcess: function(req, res){
         let userToLogin = User.findByField('email', req.body.email);
+
         if(userToLogin){
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin;
             let passwordOk = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if(passwordOk){
-                return res.send('/user/profile');
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect('/user/profile');
             }
             res.render('login', {
                 errors: {
@@ -69,9 +69,9 @@ const controller = {
         });
     },
     profile: function (req, res) {
-        console.log(req.session);
-        console.log('estas en tu perfil');
-        res.render('userProfile');
+        res.render('userProfile', {
+            user: req.session.userLogged
+        });
     }
 }
 
