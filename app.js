@@ -20,7 +20,8 @@ app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false })); //define la forma que nos llega la info de los formularios, va siempre
 app.use(express.json());
 app.use(session({
-    secret: "El mensaje secreto"
+    secret: "El mensaje secreto",
+    resave: false
 }));
 
 // ************ Template Engine - (don't touch) ************
