@@ -10,8 +10,13 @@
                 <button>Buscar</button>
             </form>
             <div class="botones-nav">
+                <% if(!locals.isLogged) { %> 
                 <a class="boton-registro" href="/user/register">Registro</a>
                 <a class="boton-login" href="/user/login">Inicio Sesión</a>
+                <% } else { %> 
+                <a class="boton-registro" href="/user/logout">Cerrar Sesión</a>
+                <a class="boton-registro" href="/user/profile">Perfil: <%= locals.userLogged.nombreApellido %> </a>
+                <% } %> 
             </div>
         </nav>
         <div class="boton-carrito">

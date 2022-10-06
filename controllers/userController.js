@@ -75,7 +75,6 @@ const controller = {
     },
     logout: function (req, res) {
         req.session.destroy();
-        console.log(req.session);
         res.redirect('/')
     }
 }

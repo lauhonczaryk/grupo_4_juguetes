@@ -1,5 +1,4 @@
 // ************ Require's ************
-
 const express = require('express');
 const path = require('path');
 const methodOverride =  require('method-override');
@@ -14,6 +13,7 @@ const userRouter = require('./routes/userRouter');
 const app = express();
 
 // ************ Middlewares - (don't touch) ************
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
 app.use(express.static(path.join(__dirname, "public"))); //definimos carpeta donde estan nuestros recursos estaticos
 app.use(methodOverride('_method'));
@@ -24,6 +24,7 @@ app.use(session({
     resave: false,
     saveUninitialized: false
 }));
+app.use(userLoggedMiddleware);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
