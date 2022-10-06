@@ -8,6 +8,7 @@ const userController = require("../controllers/userController");
 // MIDDLEWARES
 const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 
 // Formulario de registro
@@ -19,6 +20,6 @@ router.get('/login', userController.login);
 // Procesar el login
 router.post('/login', userController.loginProcess);
 // Perfil del Usuario
-router.get('/profile/', userController.profile)
+router.get('/profile/', authMiddleware, userController.profile)
 
 module.exports = router;
