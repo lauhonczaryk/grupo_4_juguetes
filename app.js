@@ -19,7 +19,9 @@ app.use(express.static(path.join(__dirname, "public"))); //definimos carpeta don
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false })); //define la forma que nos llega la info de los formularios, va siempre
 app.use(express.json());
-app.use(session( {secret: "Nuestro mensaje secreto"}));
+app.use(session({
+    secret: "El mensaje secreto"
+}));
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
