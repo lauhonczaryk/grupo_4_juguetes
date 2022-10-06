@@ -21,7 +21,8 @@ app.use(express.urlencoded({ extended: false })); //define la forma que nos lleg
 app.use(express.json());
 app.use(session({
     secret: "El mensaje secreto",
-    resave: false
+    resave: false,
+    saveUninitialized: false
 }));
 
 // ************ Template Engine - (don't touch) ************
