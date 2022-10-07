@@ -4,6 +4,7 @@ const User = require('../models/User');
 
 const controller = {
     register: function (req, res) {
+        res.cookie('testing', 'Hola Mundo!', {maxAge: 1000 * 30});
         return res.render('register');
     },
     processRegister: function (req, res) {
@@ -49,6 +50,11 @@ const controller = {
             if(passwordOk){
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+
+                if(req.body.rememberUser){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+                }
+
                 return res.redirect('/user/profile');
             }
             res.render('login', {
@@ -74,6 +80,7 @@ const controller = {
         });
     },
     logout: function (req, res) {
+        res.clearCookie('userEmail')
         req.session.destroy();
         res.redirect('/')
     }
