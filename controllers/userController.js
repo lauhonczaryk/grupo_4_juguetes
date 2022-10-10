@@ -4,7 +4,6 @@ const User = require('../models/User');
 
 const controller = {
     register: function (req, res) {
-        res.cookie('testing', 'Hola Mundo!', {maxAge: 1000 * 30});
         return res.render('register');
     },
     processRegister: function (req, res) {
