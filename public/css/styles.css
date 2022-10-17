@@ -389,6 +389,10 @@ footer img{
     background-color: white;
     border-radius: 10px;
 }
+.box-product:hover{
+    opacity: 0.7;
+
+}
 .name{
     font-size:30px;
     font-weight: bold;
