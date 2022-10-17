@@ -18,6 +18,9 @@ function writeFile(data){
 }
 
 const productController = {
+    options: function (req, res) {
+        res.render('product-options');
+    },
     crear: function (req, res) {
         res.render('create');
     },

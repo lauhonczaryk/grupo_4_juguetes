@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %> 
+    <title>Productos</title>
+</head>
+<body>
+    <header>
+        <%- include('./partials/header.ejs') %> 
+    </header>
+    <main>
+<div class="rutas-productos"><a href="/productos/listar">Listar</a></div>
+<div class="rutas-productos"><a href="/productos/crear">Crear</a></div>
+<div class="rutas-productos"><a href="/productos/detalle/:id">Detalle</a></div>
+<div class="rutas-productos"><a href="/productos/editar/:id">Editar</a></div>
+<div class="rutas-productos"><a href="/productos/borrar/:id">Borrar</a></div>
+
+    </main>
+    <footer>
+        
+    <%- include('./partials/footer.ejs') %> 
+    </footer>
+</body>
+</html>
