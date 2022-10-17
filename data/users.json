@@ -37,5 +37,12 @@
   "user": "Maldonado",
   "email": "patomaldonado99@gmail.com",
   "password": "$2a$10$kWE0YUurxPRggY1BrUx3reJ.KrqZMg90DlRhf2PS85/hgH5nNQruy"
+ },
+ {
+  "id": 6,
+  "fullName": "lau",
+  "userName": "lauhoncz",
+  "email": "lchonczaryk@gmail.com",
+  "password": "$2a$10$TfTvsOele7hvZfnAGJBZI.W5GN3MnIjq8Kf4wrYBpaT.7gCx.AGn2"
  }
 ]
