@@ -30,5 +30,8 @@
     "nodemon": "^2.0.19",
     "sequelize": "^6.25.3"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "sequelize-cli": "^6.5.1"
+  }
 }
