@@ -45,7 +45,7 @@ app.use((req, res, next)=> {
 })
 
 app.listen(3000, () =>{
-    console.log('Servidor corriendo');
+    console.log("Serving on port 3000!   http://localhost:3000/");
 })
 
 
