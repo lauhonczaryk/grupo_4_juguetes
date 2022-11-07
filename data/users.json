@@ -58,5 +58,12 @@
   "userName": "honczaryk",
   "email": "lau.honczaryk@gmail.com",
   "password": "$2a$10$O5Hd3yKlEttfz2RLpKJolOUH4IHMKP.BW4YXdMl4Ztiab5aFVrRuK"
+ },
+ {
+  "id": 9,
+  "fullName": "Augusto",
+  "userName": "Augusto",
+  "email": "augustom_96@hotmail.com",
+  "password": "$2a$10$3u7q2Uw948xR27r7o0FtS.av0ZhOBa5bKi2u5.GKOBRFY4eD/ePZ."
  }
 ]
