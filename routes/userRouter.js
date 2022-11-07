@@ -16,7 +16,7 @@ router.get('/register', guestMiddleware, userController.register);
 // Procesar el registro
 router.post('/register', validations, userController.processRegister);
 // Formulario de login
-router.get('/login', userController.login);
+router.get('/login', guestMiddleware, userController.login);
 // Procesar el login
 router.post('/login', userController.loginProcess);
 // Perfil del Usuario
