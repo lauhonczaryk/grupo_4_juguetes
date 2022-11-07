@@ -496,6 +496,37 @@ font-weight: bold;
 text-align: center;
 text-decoration: solid;
 }
+/*USER PROFILE */
+
+.userBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+    background-color:#D9D9D9;
+    width: 400px;
+    border-radius: 30px;
+    padding: 40px
+}
+.userHi {
+    text-align: center;
+color: #000;
+
+}
+.userImage{
+    width: 200px;
+    border-radius: 30px;
+  align-items: center;
+}
+.seguircomprando{
+background-color: #0000DD;
+border-radius: 30px;
+padding: 10px;
+color: white;
+text-decoration: none;
+font-size: 20px;
+width: 200px
+}
 
 /* MEDIA QUERIES */
 
