@@ -44,5 +44,12 @@
   "userName": "lauhoncz",
   "email": "lchonczaryk@gmail.com",
   "password": "$2a$10$TfTvsOele7hvZfnAGJBZI.W5GN3MnIjq8Kf4wrYBpaT.7gCx.AGn2"
+ },
+ {
+  "id": 7,
+  "fullName": "mati",
+  "userName": "matybrapps",
+  "email": "lhonczaryk@yahoo.com.ar",
+  "password": "$2a$10$ynY2kzAo4tZ6OUcZDfKY0Of22EJGq4lqFz/9Zl01ip039sTcwJ0xe"
  }
 ]

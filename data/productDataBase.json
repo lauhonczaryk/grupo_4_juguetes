@@ -21,13 +21,6 @@
           "description": "La empresa Hasbro es la propietaria de diferentes marcas, juguetes y juegos de mesa. Desde 1923 se dedica a crear y contagiar felicidad con sus productos."
      },
      {
-          "id": 4,
-          "name": "Juego de cartas UNO",
-          "price": 1000,
-          "category": "Juego de Mesa",
-          "description": "¿El rey de los juegos rompe amistades? Definitivamente el Uno. Disfrutá de tardes a pura risa y venganza despiadada entre amigos y amigas. Tendrás que quedarte sin cartas antes que los demás y cuando solo tengas una ¡no te olvides de decir UNO!"
-     },
-     {
           "id": 5,
           "name": "Pictionary",
           "price": "5001",
