@@ -259,6 +259,7 @@ div.burger-menu i{
 /*PRICE TAGS*/
 .fondo{
     background-image: url("/images/fondo.png");
+    padding-top: 40px;
  }
 .priceMax{
     border: 4px solid black;
@@ -306,7 +307,6 @@ div.burger-menu i{
     font-weight: bold;
     font-size: 35px;
     padding: 30px;
-    margin: 50px;
 }
 
 .circulos p {
