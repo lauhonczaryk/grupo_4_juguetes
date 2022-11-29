@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 const path = require('path');
-
+const db = require('../database/models')
 //Funcion para buscar dentro del JSON los productos y mostrarlo en formato Java Script
 
 function findAll(){
@@ -25,8 +25,13 @@ const productController = {
         res.render('create');
     },
     list: function (req, res) {
+       /* db.Products.findAll() { //nuevo  base de datos
+            .then(function(products){
+                res.render('menu-products', { products: products});
+            })
+        }*/
         const data = findAll()
-        res.render('menu-products', { products: data}); // dentro de la ruta mando un objeto "products" con data adentro
+       res.render('menu-products', { products: data});  // dentro de la ruta mando un objeto "products" con data adentro
     },
     detail: function (req, res) {
         const data = findAll();
