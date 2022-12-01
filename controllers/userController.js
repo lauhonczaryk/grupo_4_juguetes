@@ -1,6 +1,6 @@
 const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs');
-const User = require('../models/User');
+const User = require('../services/User');
 
 const controller = {
     register: function (req, res) {

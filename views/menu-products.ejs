@@ -11,10 +11,12 @@
     <div class="box-allproducts">
     <% products.forEach(function(producto) { %> 
     <div class="box-product">
-    <h3 class="name"><%- producto.name %></h3>
+    <a href="/productos/detalle/<%= producto.id %>" >
+        <h3 class="name"><%- producto.name %></h3>
     <div class="imagelistar"> 
         <img src="/images/products-img/<%= producto.image || "producto-sin-foto.jpeg" %>" >
     </div>
+</a>
     <ul class="menu-products" style="list-style: none">
          <li class="price" >
          $<%- producto.price %> 

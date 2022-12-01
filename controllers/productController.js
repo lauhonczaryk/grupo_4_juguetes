@@ -4,17 +4,17 @@ const path = require('path');
 const db = require('../database/models')
 //Funcion para buscar dentro del JSON los productos y mostrarlo en formato Java Script
 
-function findAll(){
-const jsonData = fs.readFileSync(path.join(__dirname,"../data/productDataBase.json"));
-const data = JSON.parse(jsonData);
-return data;
+function findAll() {
+    const jsonData = fs.readFileSync(path.join(__dirname, "../data/productDataBase.json"));
+    const data = JSON.parse(jsonData);
+    return data;
 }
 
 //Fucncion para pasar data a JSON y mandarla al .JSON
 
-function writeFile(data){
+function writeFile(data) {
     const dataString = JSON.stringify(data, null, 5);
-    fs.writeFileSync(path.join(__dirname,"../data/productDataBase.json"), dataString);
+    fs.writeFileSync(path.join(__dirname, "../data/productDataBase.json"), dataString);
 }
 
 const productController = {
@@ -25,70 +25,76 @@ const productController = {
         res.render('create');
     },
     list: function (req, res) {
-       /* db.Products.findAll() { //nuevo  base de datos
-            .then(function(products){
-                res.render('menu-products', { products: products});
+        /*   const data = findAll()
+          res.render('menu-products', { products: data});  
+           dentro de la ruta mando un objeto "products" con data adentro*/
+           db.Products.findAll()
+            .then(function (products) {
+                console.log(products)
+                res.render('menu-products', { products });
             })
-        }*/
-        const data = findAll()
-       res.render('menu-products', { products: data});  // dentro de la ruta mando un objeto "products" con data adentro
     },
     detail: function (req, res) {
+        db.Products.findByPk(req.params.id)
+        .then((productoEncontrado) => {
+            res.render('product-detail', { products: productoEncontrado });
+        })   
+        /*
         const data = findAll();
-        const productoEncontrado = data.find(function(producto) {
-           return producto.id == req.params.id
+        const productoEncontrado = data.find(function (producto) {
+            return producto.id == req.params.id
         });
-        res.render('product-detail', { products: productoEncontrado });
+        res.render('product-detail', { products: productoEncontrado });*/
     },
-    store: function (req, res){
+    store: function (req, res) {
         const data = findAll()
         console.log(req.file);
         const newProduct = {
             id: data.length + 1, //Cuenta cuantos elementos hay en la lista y le suma 1
             name: req.body.name,
-            price: req.body.price, 
+            price: req.body.price,
             category: req.body.category,
             description: req.body.description,
             color: req.body.color,
             image: req.file.filename, // dentro de la propiedad .file nos llega los datos del archivo que subimos
         }
-         data.push(newProduct); //Le agrego el nuevo product al data
+        data.push(newProduct); //Le agrego el nuevo product al data
         writeFile(data);
 
         res.redirect("/productos/listar");
 
-        
+
     },
-    edit: function (req, res){
+    edit: function (req, res) {
         const data = findAll();
-        const productoEncontrado = data.find(function(producto) {
-           return producto.id == req.params.id
+        const productoEncontrado = data.find(function (producto) {
+            return producto.id == req.params.id
         });
 
-        res.render("edit",{ producto: productoEncontrado});
+        res.render("edit", { producto: productoEncontrado });
     },
-    update: function (req, res){
+    update: function (req, res) {
         const data = findAll();
-        const productoEncontrado = data.find(function(producto) {
-           return producto.id == req.params.id
+        const productoEncontrado = data.find(function (producto) {
+            return producto.id == req.params.id
         });
-        
+
         productoEncontrado.name = req.body.name;
         productoEncontrado.price = req.body.price;
         productoEncontrado.description = req.body.description;
         productoEncontrado.category = req.body.category;
         productoEncontrado.color = req.body.color;
         writeFile(data);
-       
+
 
         res.redirect("/productos/listar");
     },
-    destroy: function (req, res){
+    destroy: function (req, res) {
         const data = findAll();
-        const productoEncontrado = data.findIndex(function(producto) { //El findindex de devueve en que indice del elemento del array donde esta 
-           return producto.id == req.params.id
+        const productoEncontrado = data.findIndex(function (producto) { //El findindex de devueve en que indice del elemento del array donde esta 
+            return producto.id == req.params.id
         });
-        data.splice(productoEncontrado,1);
+        data.splice(productoEncontrado, 1);
         writeFile(data);
 
         res.redirect("/productos/listar");
