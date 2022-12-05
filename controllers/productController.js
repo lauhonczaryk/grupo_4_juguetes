@@ -23,7 +23,7 @@ const productController = {
         db.Products.create({
             name: req.body.name,
             price: req.body.price,
-            category: req.body.category,
+            category_id: req.body.category_id,
             description: req.body.description,
             image: req.file.filename,
         })
@@ -39,7 +39,7 @@ const productController = {
         db.Products.update({
             name: req.body.name,
             price: req.body.price,
-            category: req.body.category,
+            category_id: req.body.category_id,
             description: req.body.description,
             image: req.file.filename,
         }, {
