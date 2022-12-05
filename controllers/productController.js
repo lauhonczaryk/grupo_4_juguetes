@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models')
-
+const Op = db.Sequelize.Op;
 
 const productController = {
     options: function (req, res) {
@@ -54,9 +54,60 @@ const productController = {
         db.Products.destroy({
             where: { id: req.params.id }
         })
-
-    }
+        res.redirect("/productos/listar");
+    },
+    asc: async function (req, res) {
+        const products = await db.Products.findAll({ order: [["price", "Asc"]] });
+        res.render("menu-products", { products: products });
+    },
+    dsc: async function (req, res) {
+        const products = await db.Products.findAll({ order: [['price', 'DESC']] });
+        res.render("menu-products", { products: products });
+    },
+    videojuegos: async function(req, res) {
+        const products = await db.Products.findAll({
+            where: {category_id: 1}
+        })
+        res.render("menu-products", { products: products });
+    },
+    airelibre: async function(req, res) {
+        const products = await db.Products.findAll({
+            where: {category_id: 2}
+        })
+        res.render("menu-products", { products: products });
+    },
+    demesa: async function(req, res) {
+        const products = await db.Products.findAll({
+            where: {category_id: 3}
+        })
+        res.render("menu-products", { products: products });
+    },
+    juguetes: async function(req, res) {
+        const products = await db.Products.findAll({
+            where: {category_id: 4}
+        })
+        res.render("menu-products", { products: products });
+    },
+    menos2000: async function(req, res) {
+        const products = await db.Products.findAll({
+            where: {price: {[Op.lte]: '2000'}}
+        })
+        res.render("menu-products", { products: products });
+    },
+    menos4000: async function(req, res) {
+        const products = await db.Products.findAll({
+            where: {price: {[Op.lte]: '4000'}}
+        })
+        res.render("menu-products", { products: products });
+    },
+    menos6000: async function(req, res) {
+        const products = await db.Products.findAll({
+            where: {price: {[Op.lte]: '6000'}}
+        })
+        res.render("menu-products", { products: products });
+    },
 }
+
 
 module.exports = productController;
 

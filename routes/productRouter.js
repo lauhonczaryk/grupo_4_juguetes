@@ -37,4 +37,18 @@ router.get('/editar/:id', productController.edit);
 router.put('/editar/:id', productController.update);
 
 router.delete('/borrar/:id', productController.destroy);
+
+router.get('/asc', productController.asc);
+router.get('/dsc', productController.dsc);
+
+//rutas por categoría
+router.get('/videojuegos', productController.videojuegos);
+router.get('/airelibre', productController.airelibre);
+router.get('/demesa', productController.demesa);
+router.get('/juguetes', productController.juguetes);
+//rutas por precio menr a....
+router.get('/menos2000', productController.menos2000);
+router.get('/menos4000', productController.menos4000);
+router.get('/menos6000', productController.menos6000);
+
 module.exports = router;
