@@ -2,8 +2,66 @@
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models')
-//Funcion para buscar dentro del JSON los productos y mostrarlo en formato Java Script
 
+
+const productController = {
+    options: function (req, res) {
+        res.render('product-options');
+    },
+    list: async function (req, res) {
+        const products = await db.Products.findAll()
+        res.render('menu-products', { products });
+    },
+    detail: async function (req, res) {
+        const productoEncontrado = await db.Products.findByPk(req.params.id)
+        res.render('product-detail', { products: productoEncontrado });
+    },
+    crear: function (req, res) {
+        res.render('create');
+    },
+    store: function (req, res) {
+        db.Products.create({
+            name: req.body.name,
+            price: req.body.price,
+            category: req.body.category,
+            description: req.body.description,
+            image: req.file.filename,
+        })
+            .then(() => {
+                res.redirect('/productos/listar')
+            })
+    },
+    edit: async function (req, res) {
+        const producto = await db.Products.findByPk(req.params.id)
+        res.render('edit', { producto: producto });
+    },
+    update: function (req, res) {
+        db.Products.update({
+            name: req.body.name,
+            price: req.body.price,
+            category: req.body.category,
+            description: req.body.description,
+            image: req.file.filename,
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        res.redirect("/productos/listar");
+    },
+
+    destroy: function (req, res) {
+        db.Products.destroy({
+            where: { id: req.params.id }
+        })
+
+    }
+}
+
+module.exports = productController;
+
+//CÓDIGO ANTERIOR CON JSON
+/*
 function findAll() {
     const jsonData = fs.readFileSync(path.join(__dirname, "../data/productDataBase.json"));
     const data = JSON.parse(jsonData);
@@ -16,7 +74,6 @@ function writeFile(data) {
     const dataString = JSON.stringify(data, null, 5);
     fs.writeFileSync(path.join(__dirname, "../data/productDataBase.json"), dataString);
 }
-
 const productController = {
     options: function (req, res) {
         res.render('product-options');
@@ -25,29 +82,19 @@ const productController = {
         res.render('create');
     },
     list: function (req, res) {
-        /*   const data = findAll()
+         const data = findAll()
           res.render('menu-products', { products: data});  
-           dentro de la ruta mando un objeto "products" con data adentro*/
-           db.Products.findAll()
-            .then(function (products) {
-                console.log(products)
-                res.render('menu-products', { products });
-            })
     },
     detail: function (req, res) {
-        db.Products.findByPk(req.params.id)
-        .then((productoEncontrado) => {
-            res.render('product-detail', { products: productoEncontrado });
-        })   
-        /*
+        
         const data = findAll();
         const productoEncontrado = data.find(function (producto) {
             return producto.id == req.params.id
         });
-        res.render('product-detail', { products: productoEncontrado });*/
+        res.render('product-detail', { products: productoEncontrado });
     },
     store: function (req, res) {
-        const data = findAll()
+     const data = findAll()
         console.log(req.file);
         const newProduct = {
             id: data.length + 1, //Cuenta cuantos elementos hay en la lista y le suma 1
@@ -62,8 +109,6 @@ const productController = {
         writeFile(data);
 
         res.redirect("/productos/listar");
-
-
     },
     edit: function (req, res) {
         const data = findAll();
@@ -72,8 +117,12 @@ const productController = {
         });
 
         res.render("edit", { producto: productoEncontrado });
+    
+        
     },
-    update: function (req, res) {
+    update: function (req, res){
+       
+     
         const data = findAll();
         const productoEncontrado = data.find(function (producto) {
             return producto.id == req.params.id
@@ -88,8 +137,8 @@ const productController = {
 
 
         res.redirect("/productos/listar");
-    },
-    destroy: function (req, res) {
+
+    destroy: function(req, res) {
         const data = findAll();
         const productoEncontrado = data.findIndex(function (producto) { //El findindex de devueve en que indice del elemento del array donde esta 
             return producto.id == req.params.id
@@ -102,4 +151,4 @@ const productController = {
     }
 }
 
-module.exports = productController;
+module.exports = productController;*/
