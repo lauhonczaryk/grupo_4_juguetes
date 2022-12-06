@@ -9,7 +9,7 @@ const productController = {
         res.render('product-options');
     },
     list: async function (req, res) {
-        const products = await db.Products.findAll()
+        const products = await db.Products.findAll({include: ['categories']})
         res.render('menu-products', { products });
     },
     detail: async function (req, res) {
@@ -103,6 +103,12 @@ const productController = {
     menos6000: async function(req, res) {
         const products = await db.Products.findAll({
             where: {price: {[Op.lte]: '6000'}}
+        })
+        res.render("menu-products", { products: products });
+    },
+    buscador: async function(req, res) {
+        const products = await db.Products.findAll({
+            where: {name: { [Op.like]: `%{req.query.toys}%` }}
         })
         res.render("menu-products", { products: products });
     },

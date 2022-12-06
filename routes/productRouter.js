@@ -38,6 +38,8 @@ router.put('/editar/:id', productController.update);
 
 router.delete('/borrar/:id', productController.destroy);
 
+router.get('/buscar', productController.buscador)
+
 router.get('/asc', productController.asc);
 router.get('/dsc', productController.dsc);
 

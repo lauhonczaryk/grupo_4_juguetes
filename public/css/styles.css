@@ -19,6 +19,18 @@ main {
 }
 
 /*HEADER*/
+/*MENU DESPLEGABLE
+.dropdown {
+    background-color: red;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+}
+.dropdown :hover {
+
+}*/
+
+
 .productosfixed{
     position: fixed;
     left: 20px;

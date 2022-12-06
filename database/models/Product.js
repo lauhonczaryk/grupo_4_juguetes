@@ -31,11 +31,20 @@ module.exports = (sequelize, dataTypes) => {
 
     const Product = sequelize.define(alias, cols, config)
 
-   /* Product.associate = function(models) {
-        Product.belongsTo(models.Category, {
+   Product.associate = function(models) {
+        Product.belongsTo(models.Categories, {
             as: "categories",
             foreignKey: "category_id"
         })
-    }*/
+
+        Product.belongsToMany(models.Users, {
+            as: "productuser",
+            through: "user_product",
+            foreignKey: "product_id",
+            otherKey: "user_id",
+            timestamps: false
+        })
+    }
+
     return Product;
 }

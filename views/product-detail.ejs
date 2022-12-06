@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('./partials/head.ejs') %> 
-    <title>Detalle de producto</title>
+    <%- include('./partials/head.ejs') %>
+        <title>
+            <%- products.name %>
+        </title>
 </head>
+
 <body>
-    <%- include('./partials/header.ejs') %> 
-       
+    <%- include('./partials/header.ejs') %>
+
         <div class="box-product-detail">
-        <div class="box1">
-            <p class="category-detail">Categoría / Juguetes / <%- products.category %></p>
-        <img class="image-detail" src="/images/products-img/producto-sin-foto.jpeg">
-    </div>
-    <div class="box2">
-        <ul style="list-style-type:none">
-            <li class="name-detail">
-                <%- products.name %>
-            </li>
-            <li class="price-detail">
-                <%- products.price %> $
-            </li>
-            <li class="description-detail">
-                <%- products.description %>
-            </li>      
-            <li class="vermas">
-                + ver más
-            </li>  
-        </ul>
-        <a  href="/carrito"><p class="add-cart">Agregar al carrito</p></a>
-    </div>
-    </div>
-            
-        
-   
-    
-    <%- include('./partials/footer.ejs') %> 
+            <div class="box1">
+                <% if(products.categories){ %>
+                    <p class="category-detail">Categoría / <%- products.categories.name %>
+                    </p>
+                    <% } %>
+                        <img class="image-detail" src="/images/products-img/producto-sin-foto.jpeg">
+            </div>
+            <div class="box2">
+                <ul style="list-style-type:none">
+                    <li class="name-detail">
+                        <%- products.name %>
+                    </li>
+                    <li class="price-detail">
+                        <%- products.price %> $
+                    </li>
+                    <li class="description-detail">
+                        <%- products.description %>
+                    </li>
+                    <li class="vermas">
+                        + ver más
+                    </li>
+                </ul>
+                <a href="/carrito">
+                    <p class="add-cart">Agregar al carrito</p>
+                </a>
+            </div>
+        </div>
+
+
+
+
+        <%- include('./partials/footer.ejs') %>
 
 </body>
+
 </html>
