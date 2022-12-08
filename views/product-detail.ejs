@@ -9,15 +9,18 @@
 </head>
 
 <body>
+    <div class="cartelfixed">
+        <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
+    </div>
     <%- include('./partials/header.ejs') %>
-
+    
         <div class="box-product-detail">
             <div class="box1">
                 <% if(products.categories){ %>
                     <p class="category-detail">Categoría / <%- products.categories.name %>
                     </p>
                     <% } %>
-                        <img class="image-detail" src="/images/products-img/producto-sin-foto.jpeg">
+                        <img src="/images/products-img/<%= products.filename || "producto-sin-foto.jpeg" %>" >
             </div>
             <div class="box2">
                 <ul style="list-style-type:none">

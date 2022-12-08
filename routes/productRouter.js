@@ -34,7 +34,7 @@ router.get('/crear', productController.crear);
 router.post('/crear', upload.single("productImage"), productController.store);
 
 router.get('/editar/:id', productController.edit);
-router.put('/editar/:id', productController.update);
+router.put('/editar/:id', upload.single("productImage"),productController.update);
 
 router.delete('/borrar/:id', productController.destroy);
 

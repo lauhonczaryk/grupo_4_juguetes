@@ -1,31 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('./partials/head.ejs') %> 
-    <title>Listado de productos</title>
+    <%- include('./partials/head.ejs') %>
+        <title>Listado de productos</title>
 </head>
-<body>
-       <%- include('./partials/header.ejs') %> 
-      
-    <h2>Listado de Productos</h2>
-    <div class="box-allproducts">
-    <% products.forEach(function(producto) { %> 
-    <div class="box-product">
-    <a href="/productos/detalle/<%= producto.id %>" >
-        <h3 class="name"><%- producto.name %></h3>
-    <div class="imagelistar"> 
-        <img src="/images/products-img/<%= producto.image || "producto-sin-foto.jpeg" %>" >
+
+<body >
+    <div class="cartelfixed">
+        <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
     </div>
-</a>
-    <ul class="menu-products" style="list-style: none">
-         <li class="price" >
-         $<%- producto.price %> 
-        </li>
-    </ul>
-    <a  href="/carrito"><p class="add-cart">Agregar al carrito</p></a>
-    </div>
-    <%  }) %>    
-           </div>
-     <%- include('./partials/footer.ejs') %> 
+    <%- include('./partials/header.ejs') %>
+    
+        <h2 class="titulomenu">Productos</h2>
+        <div class="todolistar">
+            <div class="filtros">
+                <div class="categorias">
+                    <ul>Categorías:</ul>
+                    <li><input type="radio" id="airelibre">
+                        <label for="airelibre"><a href="/productos/airelibre">Aire libre</a></label>
+                    </li>
+                    <li><input type="radio" id="video">
+                        <label for="video"><a href="/productos/videojuegos">Videojuegos</a></label>
+                    </li>
+                    <li><input type="radio" id="demesa">
+                        <label for="demesa"><a href="/productos/demesa">Juegos de mesa</a></label>
+                    </li>
+                    <li><input type="radio" id="juguetes">
+                        <label for="juguetes"><a href="/productos/juguetes">Juguetes</a></label>
+                    </li>
+                </div>
+                <div class="ordenar">
+                    <ul>Ordenar:</ul>
+                    <li><a href="/productos/asc">De menor a mayor</a></li>
+                    <li><a href="/productos/dsc">De mayor a menor</a></li>
+                    <li><a href="/productos/menos2000">Hasta de $2000</a></li>
+                    <li><a href="/productos/menos4000">Hasta de $4000</a></li>
+                    <li><a href="/productos/menos6000">Hasta de $6000</a></li>
+                </div>
+            </div>
+            <div class="box-allproducts">
+                <% products.forEach(function(producto) { %>
+                    <div class="box-product">
+                        <a href="/productos/detalle/<%= producto.id %>">
+                            <h3 class="name">
+                                <%- producto.name %>
+                            </h3>
+                            <div class="imagelistar">
+                                <img src="/images/products-img/<%= producto.filename || " producto-sin-foto.jpeg" %>" >
+                            </div>
+                        </a>
+                        <ul class="menu-products" style="list-style: none">
+                            <li class="price">
+                                $<%- producto.price %>
+                            </li>
+                        </ul>
+                        <a href="/carrito">
+                            <p class="add-cart">Agregar al carrito</p>
+                        </a>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
 </body>
+
 </html>

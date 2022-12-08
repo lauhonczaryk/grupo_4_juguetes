@@ -41,7 +41,7 @@ const productController = {
             price: req.body.price,
             category_id: req.body.category_id,
             description: req.body.description,
-            image: req.file.filename,
+            filename: req.file.filename,
         }, {
             where: {
                 id: req.params.id

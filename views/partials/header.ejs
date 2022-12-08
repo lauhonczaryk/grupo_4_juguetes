@@ -1,5 +1,6 @@
-<header class="main-header">
-    <div class="bottom-header">
+<header>
+   <div class="main-header">
+        <div class="bottom-header">
         <a style="margin: 0 20px;" href="/" class="logo"><img src="/images/logo.png"></a>
       
         <div class="burger-menu">
@@ -20,7 +21,7 @@
                 <a class="boton-registro" href="/user/profile">Perfil: <%= locals.userLogged.fullName %> </a>
                 <% } %> 
             </div>
-            <div class="dropdown">Menu</div>
+            <div class="dropdown"><a href="/productos/listar">Productos</a></div>
         </nav>
         <div class="boton-carrito">
             <a href="/carrito" class="cart" style="text-decoration: none;">
@@ -29,6 +30,6 @@
             </a>
         </div>
     </div>
-    <div class="productosfixed"><a href="/productos/product-options">Productos</a>
     </div>
+</div>
 </header>
