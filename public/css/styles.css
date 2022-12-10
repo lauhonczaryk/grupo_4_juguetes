@@ -18,7 +18,9 @@ main {
     margin: auto;
     width: 100%;
 }
-
+.banner{
+    width: 100%;
+}
 /*HEADER*/
 /*MENU DESPLEGABLE
 .dropdown {
@@ -82,7 +84,7 @@ main {
 }
 
 header {
-    padding-top: 18px;
+    padding-top: 30px;
 }
 
 .logo {
@@ -266,10 +268,10 @@ div.burger-menu i{
     width: 100%;
     display: block;
 }
-/*PRICE TAGS*/
+/*PRICE TAGS
 .fondo{
-    /*background-image: url("/images/fondo.png");*/
- }
+    background-image: url("/images/fondo.png");
+ }*/
 .priceMax{
     border: 4px solid black;
     border-radius: 50px;
@@ -466,7 +468,7 @@ footer img{
     justify-self: flex-start;
     margin-left: 30px;
     margin-top: 30px;
-    position: fixed;
+    position: absolute;
 }
 .filtros a{
     text-decoration: none;
@@ -500,13 +502,13 @@ footer img{
 
 }
 .titulomenu {
-    padding: 20px;
-    background-image: url("/images/titulofondi2.png");
-    
-    
-    color: white;
+    background-image: url("/images/iconos3.png");
+    background-repeat: repeat;
+    background-size: 500px;
+    color: black;
     font-family: 'Quicksand', sans-serif;
     font-size: 50px;
+    height: 80px;
 }
 .name{
     font-size:20px;
@@ -549,6 +551,88 @@ text-align: justify;
 .category{
     font-weight: bold;
 }
+/* MENU PRODUCTOS HOMEE*/
+.home{
+    background-image: url("/images/iconos3.png");
+    background-repeat: repeat;
+    background-size: 500px;
+}
+.homeproducts{
+    background-color: #69e575;
+    margin: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.todolistar-h{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box-allproducts-h {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-product-h{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: #000;
+    width: 200px;
+    background-color: white;
+    border-radius: 10px;
+    border:1px solid rgb(148, 148, 148);
+}
+.box-product-h:hover{
+    opacity: 0.7;
+
+}
+.titulomenu-h {
+    margin-left: 90px;
+    text-align: left;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+}
+.name{
+    font-size:20px;
+    text-align: center;
+    height: 50px;
+    
+}
+.box-product-h a{
+    text-decoration: none;
+    color: black;
+}
+.price{
+    text-align:right;
+    font-size: 20px;
+   font-weight: bold;
+    color: rgb(56, 56, 56);
+    margin: 10px;
+   
+}
+.imagelistar-h{
+    display: flex;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+}
+.add-cart-h{
+ background-color: red;
+ border-radius: 20px;
+ padding: 8px;
+ color: white;
+ text-decoration: none;
+ font-size: 12px;
+}
+.idlistar {
+    font-weight: bold;
+}
+.category{
+    font-weight: bold;
+}
+
+
 /* DETALLE PRODUCTO*/
 .box-product-detail{
     display: flex;
@@ -650,7 +734,9 @@ width: 200px
 /* MEDIA QUERIES */
 
 @media (min-width: 361px) {
-    
+    .body{
+        background-color: red;
+    }
 }
 
 @media (min-width: 540px) {
@@ -661,6 +747,11 @@ width: 200px
     }
     .burger-menu {
         display: none;
+    }
+    .todolistar-h{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 

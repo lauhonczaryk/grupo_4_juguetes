@@ -1,40 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Toys Planet</title>
-    <%- include('./partials/head.ejs') %> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/27.1.0/jssor.slider.min.js"></script>
+    <%- include('./partials/head.ejs') %>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/27.1.0/jssor.slider.min.js"></script>
 </head>
 
-<body>
-    <div class="ofertasfixed">
-        <i class="fas fa-fire">OFERTAS del día!</i>
-    </div>
+<body class="home">
     <div class="cartelfixed">
         <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
     </div>
-    <%- include('./partials/header.ejs') %> 
-    <main>
-       
-    <div class="fondo">
-        <div class="circulos">
-            <a href="productos/videojuegos"><p id="circuloverde">Video juegos</p></a>
-            <a href="productos/airelibre"><p id="circulorojo">Aire<br>
-                libre</p></a>            
-            <a href="productos/demesa"><p id="circuloazul">Juegos <br>de mesa</p></a>
-            <a href="productos/juguetes"><p id="circuloamarillo">Juguetes</p></a>
-        </div>
-        <div class="priceMax">
-            <a href="/productos/menos2000"><p class="pricebox">Menos de $2000</p></a>
-            <a href="/productos/menos4000"><p class="pricebox">Menos de $4000</p></a>
-            <a href="/productos/menos6000"><p class="pricebox">Menos de $6000</p></a>
-        </div>
-
-    </div>
-    </main>
-    <%- include('./partials/footer.ejs') %> 
-    <script src="/js/carrussel.js"></script>
+    <%- include('./partials/header.ejs') %>
+        <main>
+            <img class="banner" src="/images/banner3.png">
+            <div class="circulos">
+                <a href="productos/videojuegos">
+                    <p id="circuloverde">Video juegos</p>
+                </a>
+                <a href="productos/airelibre">
+                    <p id="circulorojo">Aire<br>
+                        libre</p>
+                </a>
+                <a href="productos/demesa">
+                    <p id="circuloazul">Juegos <br>de mesa</p>
+                </a>
+                <a href="productos/juguetes">
+                    <p id="circuloamarillo">Juguetes</p>
+                </a>
+            </div>
+            <div class="info">
+                <p class="infoitem">Entrega en el día</p>
+                <p class="infoitem">Envíos a todo el país</p>
+                <p class="infoitem">12 cuotas sin interés</p>
+                <p class="infoitem">Todos los medios de pago</p>
+            </div>
+            <div class="homeproducts">
+                <h2 class="titulomenu-h">Los más populares:</h2>
+                <div class="todolistar-h">
+                    <div class="box-allproducts-h">
+                        <% products.forEach(function(producto) { %>
+                            <div class="box-product-h">
+                                <a href="/productos/detalle/<%= producto.id %>">
+                                    <h3 class="name">
+                                        <%= producto.name %>
+                                    </h3>
+                                    <div class="imagelistar-h">
+                                        <img src="/images/products-img/<%= producto.filename %>|| 
+                                            producto-sin-foto.jpeg" >
+                                    </div>
+                                </a>
+                                <ul class="menu-products" style="list-style: none">
+                                    <li class="price">
+                                        $<%= producto.price %>
+                                    </li>
+                                </ul>
+                                <a href="/productos/detalle/<%= producto.id %>">
+                                    <p class="add-cart-h">ver más</p>
+                                </a>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="priceMax">
+                    <a href="/productos/menos2000">
+                        <p class="pricebox">Menos de $2000</p>
+                    </a>
+                    <a href="/productos/menos4000">
+                        <p class="pricebox">Menos de $4000</p>
+                    </a>
+                    <a href="/productos/menos6000">
+                        <p class="pricebox">Menos de $6000</p>
+                    </a>
+                </div>
+                
+            </div>
+        </main>
+        <%- include('./partials/footer.ejs') %>
+            <script src="/js/carrussel.js"></script>
 </body>
 
 </html>

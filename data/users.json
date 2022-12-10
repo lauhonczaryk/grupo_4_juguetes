@@ -65,5 +65,12 @@
   "userName": "alexb",
   "email": "alexb@hola.com",
   "password": "$2a$10$IR8bodyeCIBKBZHKOcZsE.YKH1IPG89jNyROHWAiU3oPGAJCzTPBm"
+ },
+ {
+  "id": 10,
+  "fullName": "Matías  LLansó",
+  "userName": "mattybraps",
+  "email": "matias.llanso@gmail.com",
+  "password": "$2a$10$Yojs0yHZM/tZebUeDJXhBecMx/wkeN2vH/eP/d2EASEHBRpgjWaFi"
  }
 ]
