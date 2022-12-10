@@ -14,7 +14,7 @@
     </div>
     <%- include('./partials/header.ejs') %>
         <main>
-            <img class="banner" src="/images/banner3.png">
+           <a href="productos/listar"><img class="banner" src="/images/banner3.png"></a>
             <div class="circulos">
                 <a href="productos/videojuegos">
                     <p id="circuloverde">Video juegos</p>
@@ -30,12 +30,38 @@
                     <p id="circuloamarillo">Juguetes</p>
                 </a>
             </div>
+            <div class="section2">
+                <div class="priceMax">
+                        <a href="/productos/menos2000">
+                            <p class="pricebox">Menos de $2000</p>
+                        </a>
+                        <a href="/productos/menos4000">
+                            <p class="pricebox">Menos de $4000</p>
+                        </a>
+                        <a href="/productos/menos6000">
+                            <p class="pricebox">Menos de $6000</p>
+                        </a>
+                </div>
+                <div class="flia">
+                  <a href="/productos/demesa"><img src="/images/flia2.png"></a>  
+                </div>
+                <div class="costado">
+                    <div class="promo">
+                        <a href="/productos/juguetes"><img src="/images/promo.png"></a>
+                    </div>
+                    <div class="play">
+                        <a href="/productos/detalle/3"><img src="/images/play2.png"></a>
+                    </div>
+                </div>
+            </div>
             <div class="info">
                 <p class="infoitem">Entrega en el día</p>
                 <p class="infoitem">Envíos a todo el país</p>
                 <p class="infoitem">12 cuotas sin interés</p>
                 <p class="infoitem">Todos los medios de pago</p>
             </div>
+            
+          
             <div class="homeproducts">
                 <h2 class="titulomenu-h">Los más populares:</h2>
                 <div class="todolistar-h">
@@ -47,8 +73,7 @@
                                         <%= producto.name %>
                                     </h3>
                                     <div class="imagelistar-h">
-                                        <img src="/images/products-img/<%= producto.filename %>|| 
-                                            producto-sin-foto.jpeg" >
+                                        <img src="/images/products-img/<%= producto.filename %>">
                                     </div>
                                 </a>
                                 <ul class="menu-products" style="list-style: none">
@@ -64,20 +89,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section2">
-                <div class="priceMax">
-                    <a href="/productos/menos2000">
-                        <p class="pricebox">Menos de $2000</p>
-                    </a>
-                    <a href="/productos/menos4000">
-                        <p class="pricebox">Menos de $4000</p>
-                    </a>
-                    <a href="/productos/menos6000">
-                        <p class="pricebox">Menos de $6000</p>
-                    </a>
-                </div>
-                
-            </div>
+            
         </main>
         <%- include('./partials/footer.ejs') %>
             <script src="/js/carrussel.js"></script>
