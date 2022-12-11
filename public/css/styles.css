@@ -357,7 +357,7 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 320px;
     height: 250px;
     background-image: url("/images/airelibre.png");
     background-size: 250px;
@@ -378,7 +378,7 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 320px;
     height: 250px;
     background-image: url("/images/videojuegos.png");
     background-size: 250px;
@@ -394,7 +394,7 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 320px;
     height: 250px;
     background-image: url("/images/demesa.png");
     background-size: 250px;
@@ -410,7 +410,7 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 350px;
+    width: 320px;
     height: 250px;
     background-image: url("/images/juguetes.png");
     background-size: 250px;
@@ -427,7 +427,7 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
 #circuloverde:hover,
 #circuloamarillo:hover{
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
-  width: 340px;
+  width: 330px;
   height: 250px;
 
 }
