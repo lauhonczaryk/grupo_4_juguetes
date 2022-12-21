@@ -107,8 +107,9 @@ const productController = {
         res.render("menu-products", { products: products });
     },
     buscador: async function(req, res) {
+        console.log(req.query.toys);
         const products = await db.Products.findAll({
-            where: {name: { [Op.like]: `%{req.query.toys}%` }}
+            where: {name: { [Op.like]: `%${req.query.toys}%` }}
         })
         res.render("menu-products", { products: products });
     },

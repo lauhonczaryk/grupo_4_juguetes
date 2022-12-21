@@ -27,6 +27,7 @@ router.get('/product-options', productController.options);
 
 */
 router.get('/listar', productController.list);
+router.get('/buscar', productController.buscador)
 
 router.get('/detalle/:id', productController.detail);
 
@@ -38,7 +39,6 @@ router.put('/editar/:id', upload.single("productImage"),productController.update
 
 router.delete('/borrar/:id', productController.destroy);
 
-router.get('/buscar', productController.buscador)
 
 router.get('/asc', productController.asc);
 router.get('/dsc', productController.dsc);
