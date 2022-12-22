@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.TEXT
     },
     privilege: {
-        type: dataTypes.INTEGER
+        type: dataTypes.STRING(15)
     }
     };
     let config = {

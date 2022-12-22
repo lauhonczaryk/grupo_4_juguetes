@@ -4,6 +4,12 @@ const productController = require("../controllers/productController");
 const multer = require('multer');
 const path = require("path");
 
+// MIDDLEWARES
+
+const authMiddleware = require('../middlewares/authMiddleware');
+const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
+const clientMiddleware = require('../middlewares/clientMiddleware');
+
 //Definimos constante Storage donde decime donde y como se van a guardar los archivos que subimos
 
 const storage = multer.diskStorage({
@@ -30,13 +36,13 @@ router.get('/listar', productController.list);
 
 router.get('/detalle/:id', productController.detail);
 
-router.get('/crear', productController.crear);
-router.post('/crear', upload.single("productImage"), productController.store);
+//Rutas que necesitas estar logeado para ver
+router.get('/crear',authMiddleware, clientMiddleware, productController.crear);
+router.post('/crear',upload.single("productImage"), productController.store);
+router.get('/editar/:id',authMiddleware,clientMiddleware,  productController.edit);
+router.put('/editar/:id',upload.single("productImage"),productController.update);
 
-router.get('/editar/:id', productController.edit);
-router.put('/editar/:id', upload.single("productImage"),productController.update);
-
-router.delete('/borrar/:id', productController.destroy);
+router.delete('/borrar/:id',userLoggedMiddleware,clientMiddleware, productController.destroy);
 
 router.get('/buscar', productController.buscador)
 

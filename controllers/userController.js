@@ -96,6 +96,7 @@ const controller = {
     });
 
     // console.log(req.body.password);
+    // console.log(userToLogin.privilege);
     // console.log(userToLogin.password);
     // console.log(bcryptjs.hashSync(req.body.password, 10));
 
@@ -108,6 +109,7 @@ const controller = {
       if (passwordOk) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
+        // console.log(req.session.userLogged.privilege);
 
         if (req.body.rememberUser) {
           res.cookie("userEmail", req.body.email, { maxAge: 1000 * 60 * 2 });
