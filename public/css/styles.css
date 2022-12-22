@@ -272,6 +272,7 @@ div.burger-menu i{
 .fondo{
     background-image: url("/images/fondo.png");
  }*/
+ 
 .priceMax{
     border-radius: 50px;
     display: flex;
@@ -304,6 +305,7 @@ div.burger-menu i{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
 }
 .flia img{
     width: 500px;
@@ -334,7 +336,7 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border-radius: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-family: Georgia;
     font-weight: bold;/*
@@ -386,7 +388,6 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
     transition: 200ms;
     border: 7px solid #69e575;
     font-family: 'Open Sans', sans-serif;
-    margin-left: 20px;
     margin-right: 20px;
 }
 
@@ -419,7 +420,6 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border: 7px solid #e1d159;
     font-family: 'Open Sans', sans-serif;
     margin-left: 20px;
-    margin-right: 20px;
 }
 
 #circuloazul:hover,
@@ -496,7 +496,7 @@ footer img{
 
 .todolistar{
     display: flex;
-    flex-wrap: wrap;
+    
 }
 .filtros{
     background-color: #ebebeb;
@@ -508,7 +508,6 @@ footer img{
     justify-self: flex-start;
     margin-left: 30px;
     margin-top: 30px;
-    position: absolute;
 }
 .filtros a{
     text-decoration: none;
@@ -523,9 +522,7 @@ footer img{
 .box-allproducts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    /*background-color: #f5f4f4;*/
-    justify-self: flex-end;
+justify-content: center;
 }
 
 .box-product{
@@ -864,6 +861,7 @@ width: 200px
     }
     
 }
+
 
 @media (min-width: 1100px) {
     #slider1_container{
