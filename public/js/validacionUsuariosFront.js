@@ -3,10 +3,12 @@ window.addEventListener("load", function () {
 
   formulario.addEventListener("submit", function (e) {
     let campoNombre = document.querySelector("#fullName");
-    let campoUsuario = document.querySelector("#userName");
+    let campoAvatar = document.querySelector("#avatar");
     let campoEmail = document.querySelector("#email");
     let campoPassword = document.querySelector("#password");
     let errores = [];
+
+    console.log(campoAvatar.value);
 
     if (campoNombre.value == "") {
       errores.push("Campo Nombre no puede estar vacio");
@@ -33,15 +35,10 @@ window.addEventListener("load", function () {
       alert("Campo Contraseña debe tener minimo 8 caracteres");
     }
 
-    if (campoUsuario.value == "") {
-      errores.push("Campo Usuario no puede estar vacio");
-      alert("Campo Usuario no puede estar vacia");
-    } else if (campoUsuario.value.length < 6) {
-      errores.push("Campo Usuario debe tener minimo 6 caracteres");
-      alert("Campo Usuario debe tener minimo 6 caracteres");
-    }
-
-
+    if (campoAvatar.value == "") {
+      errores.push("Debe incluir una imagen");
+      alert("Debe incluir una imagen");
+    } 
     
 
     if (errores.length > 0) {
