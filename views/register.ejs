@@ -74,21 +74,20 @@
                         </div>
                     <% } %>
                 </div>
-                <div class="terceralinea">
+                 <div class="terceralinea">
                     <input 
                         type="file" 
                         name="avatar" 
                         id="avatar" 
                         placeholder="foto" 
-                        class="<%= locals.errors && errors.avatar ? "is-invalid" : null %>" 
-                        value="<%= locals.oldData ? oldData.avatar : null %>"
+                        
                     >
                     <% if (locals.errors && errors.avatar) { %>
                         <div style="color: red;">
                             <%= errors.avatar.msg %> 
                         </div>
                     <% } %>
-                </div>
+                </div> 
                 <div class="cuartalinea">
                     <input 
                         type="password" 

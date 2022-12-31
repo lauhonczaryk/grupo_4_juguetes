@@ -12,6 +12,7 @@ const controller = {
  
   //Registro Nuevo con DB
   processRegister: async function (req, res) {
+    console.log(req.file.filename)
     const resultValidation = validationResult(req);
 
     if (resultValidation.errors.length > 0) {

@@ -6,7 +6,7 @@ const validations = [
     body('email')
         .notEmpty().withMessage('Ingresá un correo electrónico').bail()
         .isEmail().withMessage('Ingresá un correo válido'),
-    body('avatar').notEmpty().withMessage('Ingresá una imágen de perfil'),
+   /* body('avatar').notEmpty().withMessage('Ingresá una imágen de perfil'),*/
     body('password')
         .notEmpty().withMessage('Ingresá una contranseña').bail()
         .isLength({min: 8}).withMessage('Tu contraseña debe contener un mínimo de 8 caractéres')

@@ -9,6 +9,7 @@ const path = require("path");
 const authMiddleware = require('../middlewares/authMiddleware');
 const userLoggedMiddleware = require('../middlewares/userLoggedMiddleware');
 const clientMiddleware = require('../middlewares/clientMiddleware');
+const validationsProducts = require('../middlewares/validateCreationMiddleware');
 
 //Definimos constante Storage donde decime donde y como se van a guardar los archivos que subimos
 
@@ -39,7 +40,7 @@ router.get('/detalle/:id', productController.detail);
 
 //Rutas que necesitas estar logeado para ver
 router.get('/crear',authMiddleware, clientMiddleware, productController.crear);
-router.post('/crear',upload.single("productImage"), productController.store);
+router.post('/crear',upload.single("productImage") ,productController.store);
 router.get('/editar/:id',authMiddleware,clientMiddleware,  productController.edit);
 router.put('/editar/:id',upload.single("productImage"),productController.update);
 

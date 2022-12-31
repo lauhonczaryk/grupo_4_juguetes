@@ -28,7 +28,8 @@ const productController = {
             filename: req.file.filename,
         })
             .then(() => {
-                res.redirect('/productos/listar')
+                alert('Creado existosamente')
+                res.redirect('/productos/crear')
             })
     },
     edit: async function (req, res) {

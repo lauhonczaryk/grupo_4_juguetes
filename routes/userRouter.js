@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require("path");
-const { body } = require('express-validator');
-
 // CONTROLLER
 const userController = require("../controllers/userController");
 
@@ -18,17 +16,16 @@ const avatarStorage = multer.diskStorage({
       cb(null, path.join(__dirname,'../public/images/avatars'))
     },
     filename: function (req, file, cb) {
-      const newFilename = `${Date.now()}_img_${path.extname(file.originalname)}`;
+      const newFilename = 'user-' + Date.now()+ path.extname(file.originalname);
       cb(null, newFilename)
     }
   })
-  
   const uploadAvatar = multer({ avatarStorage: avatarStorage });
 
 // Formulario de registro
 router.get('/register', guestMiddleware, userController.register);
 // Procesar el registro
-router.post('/register', uploadAvatar.single('avatar'), validations, userController.processRegister);
+router.post('/register', uploadAvatar.single('avatar'), /*validations, */userController.processRegister);
 // Formulario de login
 router.get('/login', guestMiddleware, userController.login);
 // Procesar el login
