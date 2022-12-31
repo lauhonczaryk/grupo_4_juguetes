@@ -768,6 +768,32 @@ text-decoration: none;
 font-size: 20px;
 width: 200px
 }
+/*QUIENES SOMOS */
+.quienes{
+    text-align: center;
+}
+.quienes h2{
+    font-size: 20px;
+    text-decoration: underline;
+    margin-top: 30px;
+}
+.integrantes{
+    display: flex;
+    justify-content: center;
+}
+.integrantes p strong{
+    text-align: left;
+    font-size: 30px;
+}
+.integrantes p{
+margin: 30px;
+border: 1px solid black;
+border-radius: 50px;
+padding: 40px;
+width: 22%;
+text-align: justify;
+line-height: 1.4;
+}
 
 /* MEDIA QUERIES */
 
