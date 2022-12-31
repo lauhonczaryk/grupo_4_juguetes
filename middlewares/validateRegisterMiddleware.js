@@ -1,14 +1,15 @@
 const { body } = require('express-validator');
 
 const validations = [
-    body('fullName').notEmpty().withMessage('Te faltó poner tu nombre'),
-    body('userName').notEmpty().withMessage('Te faltó poner tu usuario'),
+    body('fullName').notEmpty().withMessage('Ingresá tu nombre').bail().isLength({min:2}).withMessage('Ingresá un nombre válido'),
+    body('userName').notEmpty().withMessage('Ingresa un nombre de usuario'),
     body('email')
-        .notEmpty().withMessage('Te faltó poner tu correo electrónico').bail()
-        .isEmail().withMessage('Tenes que escribir un correo válido'),
+        .notEmpty().withMessage('Ingresá un correo electrónico').bail()
+        .isEmail().withMessage('Ingresá un correo válido'),
+    body('avatar').notEmpty().withMessage('Ingresá una imágen de perfil'),
     body('password')
-        .notEmpty().withMessage('Te faltó poner tu contranseña').bail()
-        .isLength({min: 4, max:22}).withMessage('Tu contraseña debe contener un minimo de 4 cáracteres')
+        .notEmpty().withMessage('Ingresá una contranseña').bail()
+        .isLength({min: 8}).withMessage('Tu contraseña debe contener un mínimo de 8 caractéres')
 ];
 
 module.exports = validations;

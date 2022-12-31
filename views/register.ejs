@@ -25,7 +25,7 @@
         <% } %>  -->
         <h2 style="margin: 20px;">Creá tu cuenta</h2>
         <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/user/login">iniciá sesión</a></p>
-        <form method="POST" action="/user/register" class="register">
+        <form method="POST" enctype="multipart/form-data" action="/user/register" class="register">
             <div class="formbox">
                 <div class="primeralinea">
                     <div class="div-form-left">
@@ -43,7 +43,7 @@
                                 </div>
                         <% } %>
                     </div>
-                    <div class="div-form-right">
+                  <!-- <div class="div-form-right">
                         <input 
                             type="text" 
                             name="userName" 
@@ -57,7 +57,7 @@
                                 <%= errors.userName.msg %> 
                             </div>
                         <% } %>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="segundalinea">
                     <input 
@@ -76,10 +76,25 @@
                 </div>
                 <div class="terceralinea">
                     <input 
+                        type="file" 
+                        name="avatar" 
+                        id="avatar" 
+                        placeholder="foto" 
+                        class="<%= locals.errors && errors.avatar ? "is-invalid" : null %>" 
+                        value="<%= locals.oldData ? oldData.avatar : null %>"
+                    >
+                    <% if (locals.errors && errors.avatar) { %>
+                        <div style="color: red;">
+                            <%= errors.avatar.msg %> 
+                        </div>
+                    <% } %>
+                </div>
+                <div class="cuartalinea">
+                    <input 
                         type="password" 
                         name="password" 
                         id="password" 
-                        placeholder="Contraseña" 
+                        placeholder="Contraseña (min 8 caractéres)" 
                         class="<%= locals.errors && errors.password ? "is-invalid" : null %>"
                         value="<%= locals.oldData ? oldData.password : null %>"
                     >

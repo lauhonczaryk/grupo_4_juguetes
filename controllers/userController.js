@@ -9,41 +9,7 @@ const controller = {
   register: function (req, res) {
     return res.render("register");
   },
-
-  // Registro Viejo con JSON
-  //   processRegister: function (req, res) {
-  //     const resultValidation = validationResult(req);
-
-  //     if (resultValidation.errors.length > 0) {
-  //       return res.render("register", {
-  //         errors: resultValidation.mapped(),
-  //         oldData: req.body,
-  //       });
-  //     }
-
-  //     let userInDb = User.findByField("email", req.body.email);
-
-  //     if (userInDb) {
-  //       return res.render("register", {
-  //         errors: {
-  //           email: {
-  //             msg: "Este correo ya existe",
-  //           },
-  //         },
-  //         oldData: req.body,
-  //       });
-  //     }
-
-  //     let userToCreate = {
-  //       ...req.body,
-  //       password: bcryptjs.hashSync(req.body.password, 10),
-  //     };
-
-  //     let userCreated = User.create(userToCreate);
-
-  //     res.redirect("/user/login");
-  //   },
-
+ 
   //Registro Nuevo con DB
   processRegister: async function (req, res) {
     const resultValidation = validationResult(req);
@@ -57,8 +23,8 @@ const controller = {
 
     const newUser = {
       name: req.body.fullName,
-      username: req.body.userName,
       email: req.body.email,
+      avatar: req.file.filename,
       password: bcryptjs.hashSync(req.body.password, 10),
       privilege: 1,
     };
@@ -148,3 +114,36 @@ const controller = {
 };
 
 module.exports = controller;
+ // Registro Viejo con JSON
+  //   processRegister: function (req, res) {
+  //     const resultValidation = validationResult(req);
+
+  //     if (resultValidation.errors.length > 0) {
+  //       return res.render("register", {
+  //         errors: resultValidation.mapped(),
+  //         oldData: req.body,
+  //       });
+  //     }
+
+  //     let userInDb = User.findByField("email", req.body.email);
+
+  //     if (userInDb) {
+  //       return res.render("register", {
+  //         errors: {
+  //           email: {
+  //             msg: "Este correo ya existe",
+  //           },
+  //         },
+  //         oldData: req.body,
+  //       });
+  //     }
+
+  //     let userToCreate = {
+  //       ...req.body,
+  //       password: bcryptjs.hashSync(req.body.password, 10),
+  //     };
+
+  //     let userCreated = User.create(userToCreate);
+
+  //     res.redirect("/user/login");
+  //   },

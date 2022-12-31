@@ -12,7 +12,7 @@ const clientMiddleware = require('../middlewares/clientMiddleware');
 
 //Definimos constante Storage donde decime donde y como se van a guardar los archivos que subimos
 
-const storage = multer.diskStorage({
+const productStorage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.join(__dirname,'../public/images/products-img'))
     },
@@ -22,7 +22,7 @@ const storage = multer.diskStorage({
     }
   })
   
-  const upload = multer({ storage: storage }); // Defino la variable upload que despues le voy aplicar el .single dentro de la ruta POST
+  const upload = multer({ productStorage: productStorage }); // Defino la variable upload que despues le voy aplicar el .single dentro de la ruta POST
 
 
 /* Rutas dentro de /productos/... 
