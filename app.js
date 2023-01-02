@@ -5,6 +5,11 @@ const methodOverride =  require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 
+//ruta APIS
+/*
+const apiProductRouter = require('./routes/api/productRoutesApi');
+const apiUserRouter = require('./routes/api/userRoutesApi')*/
+
 //Requerimos nuestros archivos de rutas
 const indexRouter = require('./routes/index');
 const productRouter = require('./routes/productRouter');
@@ -38,6 +43,8 @@ app.set('views', path.join(__dirname, "./views"));
 app.use('/', indexRouter); // Rutas para el main
 app.use('/productos', productRouter); // Rutas referidas a productos
 app.use('/user', userRouter); // Rutas referidas a usuarios
+/*app.use('/api/products', apiProductRouter)
+app.use('/api/users', apiUserRouter)*/
 
 // ERROR 404 - comentado para poder trabajar con errores de formularios
 app.use((req, res, next)=> {
