@@ -9,7 +9,7 @@ const validations = [
    /* body('avatar').notEmpty().withMessage('Ingresá una imágen de perfil'),*/
     body('password')
         .notEmpty().withMessage('Ingresá una contranseña').bail()
-        .isLength({min: 8}).withMessage('Tu contraseña debe contener un mínimo de 8 caractéres')
+        .isLength({min: 8}).withMessage('Tu contraseña debe contener un mínimo de 8 caracteres')
 ];
 
 module.exports = validations;

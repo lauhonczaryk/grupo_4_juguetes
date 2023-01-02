@@ -11,11 +11,11 @@ window.addEventListener("load", function () {
     console.log(campoAvatar.value);
 
     if (campoNombre.value == "") {
-      errores.push("Campo Nombre no puede estar vacio");
-      alert("Campo Nombre no puede estar vacio");
+      errores.push("Ingresá tu nombre");
+      alert('Ingresá tu nombre');
     } else if (campoNombre.value.length < 3) {
-      errores.push("Campo Nombre debe tener un minimo de 3 caracteres");
-      alert("Campo Nombre debe tener un minimo de 3 caracteres");
+      errores.push("Tu nombre debe tener un mínimo de 2 caracteres");
+     alert("Tu nombre debe tener un mínimo de 2 caracteres");
     }
 
     if (campoEmail.value == "") {
@@ -28,16 +28,16 @@ window.addEventListener("load", function () {
     // }
 
     if (campoPassword.value == "") {
-      errores.push("Campo Password no puede estar vacio");
-      alert("Campo Contraseña no puede estar vacia");
-    } else if (campoPassword.value.length < 8) {
-      errores.push("Campo Contraseña debe tener minimo 8 caracteres");
-      alert("Campo Contraseña debe tener minimo 8 caracteres");
+      errores.push("Ingresá una contranseña'");
+      alert("Ingresá una contranseña'");
+    } else if (campoPassword.value.length < 9) {
+      errores.push("Tu contraseña debe contener un mínimo de 8 caracteres");
+      alert("Tu contraseña debe contener un mínimo de 8 caracteres");
     }
 
     if (campoAvatar.value == "") {
-      errores.push("Debe incluir una imagen");
-      alert("Debe incluir una imagen");
+      errores.push("Ingresá una imágen de perfil");
+      alert("Ingresá una imágen de perfil");
     } 
     
 

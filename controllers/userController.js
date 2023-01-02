@@ -27,7 +27,7 @@ const controller = {
       email: req.body.email,
       avatar: req.file.filename,
       password: bcryptjs.hashSync(req.body.password, 10),
-      privilege: 1,
+      privilege: "user",
     };
     let userInDb = await db.User.findOne({
       where: {
@@ -39,7 +39,7 @@ const controller = {
       return res.render("register", {
         errors: {
           email: {
-            msg: "Este correo ya existe",
+            msg: "Este correo ya existe, si ya tenés una cuenta iniciá sesión",
           },
         },
         oldData: req.body,
@@ -96,7 +96,7 @@ const controller = {
     res.render("login", {
       errors: {
         email: {
-          msg: "Este correo no existe",
+          msg: "Este correo no existe, si no tenés cuenta, registrate",
         },
       },
     });
