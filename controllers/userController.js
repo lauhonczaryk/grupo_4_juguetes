@@ -6,14 +6,15 @@ const Op = db.Sequelize.Op;
 //const User = db.User;
 
 const controller = {
+
   register: function (req, res) {
     return res.render("register");
   },
  
   //Registro Nuevo con DB
   processRegister: async function (req, res) {
-    console.log(req.file.filename)
     const resultValidation = validationResult(req);
+    console.log(resultValidation)
 
     if (resultValidation.errors.length > 0) {
       return res.render("register", {
@@ -48,7 +49,7 @@ const controller = {
 
     await db.User.create(newUser);
 
-    console.log(newUser); //Vericación de Usuario Creado
+   // console.log(newUser); //Vericación de Usuario Creado
     res.redirect("/user/login");
   },
 
@@ -103,6 +104,7 @@ const controller = {
   },
 
   profile: function (req, res) {
+console.log(req.session.userLogged)
     res.render("userProfile", {
       user: req.session.userLogged,
     });

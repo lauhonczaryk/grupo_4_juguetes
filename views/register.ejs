@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head.ejs') %> 
-    <title>Registro</title>
+    <%- include('./partials/head.ejs') %>
+        <title>Registro</title>
 </head>
 
 <body>
@@ -15,35 +15,32 @@
             <p>Con tu compra superior a $7500, tenés envío gratis</p>
         </div>
     </div>
-    <%- include('./partials/header.ejs') %> 
-    <section class="main-form">
-        <!-- MOSTRAR ERRORES -->
-        <!-- <% if (locals.errors) { %>
+    <%- include('./partials/header.ejs') %>
+        <section class="main-form">
+            <!-- MOSTRAR ERRORES -->
+            <!-- <% if (locals.errors) { %>
             <% for( let oneError in errors ) { %>
                 <p> <%= errors[oneError].msg %> </p>
             <% } %>
         <% } %>  -->
-        <h2 style="margin: 20px;">Creá tu cuenta</h2>
-        <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/user/login">iniciá sesión</a></p>
-        <form method="POST" enctype="multipart/form-data" action="/user/register" class="register">
-            <div class="formbox">
-                <div class="primeralinea">
-                    <div class="div-form-left">
-                        <input 
-                            type="text" 
-                            name="fullName" 
-                            id="fullName" 
-                            placeholder="Nombre y apellido" 
-                            class="<%= locals.errors && errors.fullName ? "is-invalid" : null %> izquierda" 
+            <h2 style="margin: 20px;">Creá tu cuenta</h2>
+            <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/user/login">iniciá sesión</a>
+            </p>
+            <form method="POST" action="/user/register" enctype="multipart/form-data" class="register">
+                <div class="formbox">
+                    <div class="primeralinea">
+                        <div class="div-form-left">
+                            <input type="text" name="fullName" id="fullName" placeholder="Nombre y apellido"
+                                class="<%= locals.errors && errors.fullName ? " is-invalid" : null %> izquierda"
                             value="<%= locals.oldData ? oldData.fullName : null %>"
-                        >
-                        <% if (locals.errors && errors.fullName) { %>
-                                <div style="color: red;">
-                                    <%= errors.fullName.msg %> 
-                                </div>
-                        <% } %>
-                    </div>
-                  <!-- <div class="div-form-right">
+                                >
+                                <% if (locals.errors && errors.fullName) { %>
+                                    <div style="color: red;">
+                                        <%= errors.fullName.msg %>
+                                    </div>
+                                    <% } %>
+                        </div>
+                        <!-- <div class="div-form-right">
                         <input 
                             type="text" 
                             name="userName" 
@@ -58,60 +55,47 @@
                             </div>
                         <% } %>
                     </div>-->
-                </div>
-                <div class="segundalinea">
-                    <input 
-                        type="email" 
-                        name="email" 
-                        id="email" 
-                        placeholder="e-mail" 
-                        class="<%= locals.errors && errors.email ? "is-invalid" : null %>" 
+                    </div>
+                    <div class="segundalinea">
+                        <input type="email" name="email" id="email" placeholder="e-mail"
+                            class="<%= locals.errors && errors.email ? " is-invalid" : null %>"
                         value="<%= locals.oldData ? oldData.email : null %>"
-                    >
-                    <% if (locals.errors && errors.email) { %>
-                        <div style="color: red;">
-                            <%= errors.email.msg %> 
-                        </div>
-                    <% } %>
-                </div>
-                 <div class="terceralinea">
-                    <input 
-                        type="file" 
-                        name="avatar" 
-                        id="avatar" 
-                        placeholder="foto" 
-                        
-                    >
-                    <% if (locals.errors && errors.avatar) { %>
-                        <div style="color: red;">
-                            <%= errors.avatar.msg %> 
-                        </div>
-                    <% } %>
-                </div> 
-                <div class="cuartalinea">
-                    <input 
-                        type="password" 
-                        name="password" 
-                        id="password" 
-                        placeholder="Contraseña (min 8 caractéres)" 
-                        class="<%= locals.errors && errors.password ? "is-invalid" : null %>"
+                            >
+                            <% if (locals.errors && errors.email) { %>
+                                <div style="color: red;">
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
+                    </div>
+                    <div class="terceralinea">
+                        <input type="file" name="avatar" id="avatar" placeholder="foto">
+                        <% if (locals.errors && errors.avatar) { %>
+                            <div style="color: red;">
+                                <%= errors.avatar.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="cuartalinea">
+                        <input type="password" name="password" id="password" placeholder="Contraseña (min 8 caractéres)"
+                            class="<%= locals.errors && errors.password ? " is-invalid" : null %>"
                         value="<%= locals.oldData ? oldData.password : null %>"
-                    >
-                    <% if (locals.errors && errors.password) { %>
-                        <div style="color: red;">
-                            <%= errors.password.msg %> 
-                        </div>
-                    <% } %>
-                    <!-- <input type="password" name="confirmPassword" id="confirmPassword"
+                            >
+                            <% if (locals.errors && errors.password) { %>
+                                <div style="color: red;">
+                                    <%= errors.password.msg %>
+                                </div>
+                                <% } %>
+                                    <!-- <input type="password" name="confirmPassword" id="confirmPassword"
                         placeholder="Confirmar contraseña"> -->
+                    </div>
                 </div>
-            </div>
-        <div class="caja-boton">
-           <button  type="submit" class="boton-submit">Crear</button>
-        </div>
-        </form>
-</section>
-<script src="/js/validacionUsuariosFront.js"></script>
+                <div class="caja-boton">
+                    <button type="submit" class="boton-submit">Crear</button>
+                </div>
+            </form>
+        </section>
+       <!--- <script src="/js/validacionUsuariosFront.js"></script>-->
 </body>
-<%- include('./partials/footer.ejs') %> 
+<%- include('./partials/footer.ejs') %>
+
 </html>
