@@ -11,7 +11,7 @@ const validations = require('../middlewares/validateRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
-const avatarStorage = multer.diskStorage({
+const storage = multer.diskStorage({
     destination: function (req, file, cb) {
       cb(null, path.join(__dirname,'../public/images/avatars'))
     },
@@ -20,12 +20,12 @@ const avatarStorage = multer.diskStorage({
       cb(null, newFilename)
     }
   })
-  const uploadAvatar = multer({ avatarStorage: avatarStorage });
+  const uploadAvatar = multer({storage });
 
 // Formulario de registro
 router.get('/register', guestMiddleware, userController.register);
 // Procesar el registro
-router.post('/register', uploadAvatar.single('avatar'), /*validations, */userController.processRegister);
+router.post('/register', uploadAvatar.single('avatar'), validations, userController.processRegister);
 // Formulario de login
 router.get('/login', guestMiddleware, userController.login);
 // Procesar el login

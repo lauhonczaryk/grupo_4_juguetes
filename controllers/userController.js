@@ -6,14 +6,15 @@ const Op = db.Sequelize.Op;
 //const User = db.User;
 
 const controller = {
+
   register: function (req, res) {
     return res.render("register");
   },
  
   //Registro Nuevo con DB
   processRegister: async function (req, res) {
-    //console.log(req.file.filename)
     const resultValidation = validationResult(req);
+    console.log(resultValidation)
 
     if (resultValidation.errors.length > 0) {
       return res.render("register", {
@@ -27,7 +28,7 @@ const controller = {
       email: req.body.email,
       avatar: req.file.filename,
       password: bcryptjs.hashSync(req.body.password, 10),
-      privilege: 1,
+      privilege: "user",
     };
     let userInDb = await db.User.findOne({
       where: {
@@ -39,7 +40,7 @@ const controller = {
       return res.render("register", {
         errors: {
           email: {
-            msg: "Este correo ya existe",
+            msg: "Este correo ya existe, si ya tenés una cuenta iniciá sesión",
           },
         },
         oldData: req.body,
@@ -48,7 +49,7 @@ const controller = {
 
     await db.User.create(newUser);
 
-    console.log(newUser); //Vericación de Usuario Creado
+   // console.log(newUser); //Vericación de Usuario Creado
     res.redirect("/user/login");
   },
 
@@ -96,13 +97,14 @@ const controller = {
     res.render("login", {
       errors: {
         email: {
-          msg: "Este correo no existe",
+          msg: "Este correo no existe, si no tenés cuenta, registrate",
         },
       },
     });
   },
 
   profile: function (req, res) {
+console.log(req.session.userLogged)
     res.render("userProfile", {
       user: req.session.userLogged,
     });
