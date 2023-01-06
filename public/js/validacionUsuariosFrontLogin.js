@@ -2,8 +2,7 @@ window.addEventListener("load", function () {
   let formulario = document.querySelector("form.register");
 
   formulario.addEventListener("submit", function (e) {
-    let campoNombre = document.querySelector("#fullName");
-    let campoAvatar = document.querySelector("#avatar");
+   
     let campoEmail = document.querySelector("#email");
     let campoPassword = document.querySelector("#password");
     let erroresFront  = document.querySelector("div.erroresFront ul")
@@ -11,15 +10,9 @@ window.addEventListener("load", function () {
     erroresFront.innerHTML = "";
 
 
-    console.log(campoAvatar.value);
+    
 
-    if (campoNombre.value == "") {
-      errores.push("Campo Nombre no puede estar vacio");
-      //alert("Campo Nombre no puede estar vacio");
-    } else if (campoNombre.value.length < 3) {
-      errores.push("Campo Nombre debe tener un minimo de 3 caracteres");
-      //alert("Campo Nombre debe tener un minimo de 3 caracteres");
-    }
+   
 
     if (campoEmail.value == "") {
       errores.push("Campo Email no puede estar vacio");
@@ -38,12 +31,7 @@ window.addEventListener("load", function () {
       //alert("Campo Contraseña debe tener minimo 8 caracteres");
     }
 
-    if (campoAvatar.value == "") {
-      errores.push("Debe incluir una imagen");
-      //alert("Debe incluir una imagen");
-    } 
     
-
     if (errores.length > 0) {
 
       e.preventDefault();
