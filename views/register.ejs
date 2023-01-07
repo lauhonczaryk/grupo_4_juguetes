@@ -6,10 +6,7 @@
         <title>Registro</title>
 </head>
 
-<body>
-    <div class="ofertasfixed">
-        <i class="fas fa-fire">OFERTAS del día!</i>
-    </div>
+<body class="bodyform">
     <div class="cartel-contenedor">
         <div class="cartelfixed">
             <p>Con tu compra superior a $7500, tenés envío gratis</p>
@@ -26,6 +23,11 @@
             <h2 style="margin: 20px;">Creá tu cuenta</h2>
             <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/user/login">iniciá sesión</a>
             </p>
+            <div class="errores">
+                <ul>
+
+                </ul>
+            </div>
             <form method="POST" action="/user/register" enctype="multipart/form-data" class="register">
                 <div class="formbox">
                     <div class="primeralinea">
@@ -94,7 +96,7 @@
                 </div>
             </form>
         </section>
-       <!--- <script src="/js/validacionUsuariosFront.js"></script>-->
+        <script src="/js/validacionUsuariosFront.js"></script>
 </body>
 <%- include('./partials/footer.ejs') %>
 

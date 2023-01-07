@@ -38,7 +38,7 @@ router.get('/detalle/:id', productController.detail);
 //Rutas que necesitas estar logeado para ver
 router.get('/crear',authMiddleware, clientMiddleware, productController.crear);
 
-router.post('/crear',upload.single("productImage"),productController.store);
+router.post('/crear',upload.single("productImage"),validateCreationMiddleware, productController.store);
 
 router.get('/editar/:id',authMiddleware,clientMiddleware,  productController.edit);
 router.put('/editar/:id',upload.single("productImage"),productController.update);
