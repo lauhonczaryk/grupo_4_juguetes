@@ -20,23 +20,25 @@
        
         <section class="main-form">
             <h2 style="margin: 20px;">Editando producto "<%= producto.name %>"  </h2>
-            
+            <div class="erroresFront">
+                <ul></ul>
+            </div>
             <form action="/productos/editar/<%= producto.id %>?_method=put" method="POST" enctype="multipart/form-data" class="register">
             <div class="formbox">
                 <div class="primeralinea">
-                    <input type="text" name="name" value="<%= producto.name %>" required>
+                    <input type="text" name="name" id="name" value="<%= producto.name %>" required>
                 </div>
                 <div class="segundalinea">
-                    <input type="text" name="description"  value="<%= producto.description %>" required>
+                    <input type="text" name="description" id="description"  value="<%= producto.description %>" required>
                 </div>
                 <div class="terceralinea">
-                    <input type="file" name="productImage"  value="<%= producto.filename %>" required >
+                    <input type="file" name="productImage" id="avatar"  value="<%= producto.filename %>" required >
                 </div>
                 <div class="cuartalinea">
-                    <input type="text" name="category_id"  value="<%= producto.category_id %>" required>
+                    <input type="text" name="category_id" id="category" value="<%= producto.category_id %>" required>
                 </div>
                 <div class="quintalinea">
-                    <input type="text" name="price"  value="<%= producto.price %>" required>
+                    <input type="text" name="price" id="price" value="<%= producto.price %>" required>
                 </div>
             </div>
             <div class="caja-botones">
@@ -54,6 +56,7 @@
 
         
 </section>
+<script src="/js/validacionProductosFrontEdit.js"></script>
 </body>
 <%- include('./partials/footer.ejs') %> 
 </html>

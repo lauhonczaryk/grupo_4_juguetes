@@ -10,7 +10,8 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.STRING(30)
     } ,
     avatar: {
-        type: dataTypes.TEXT
+        type: dataTypes.TEXT,
+         
     } ,
     password:{
         type: dataTypes.TEXT

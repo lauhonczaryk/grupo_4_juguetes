@@ -6,7 +6,10 @@ window.addEventListener("load", function () {
     let campoAvatar = document.querySelector("#avatar");
     let campoEmail = document.querySelector("#email");
     let campoPassword = document.querySelector("#password");
+    let erroresFront  = document.querySelector("div.erroresFront ul")
     let errores = [];
+
+    console.log(campoAvatar.value);
 
     if (campoNombre.value == "") {
       errores.push("Ingresá tu nombre");
@@ -29,6 +32,7 @@ window.addEventListener("load", function () {
     }
 
     if (errores.length > 0) {
+
       e.preventDefault();
       let ulErrores = document.querySelector('div.errores ul');
       for (let i = 0; i < errores.length; i++) {

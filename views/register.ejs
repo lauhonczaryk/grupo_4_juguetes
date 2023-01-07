@@ -20,20 +20,21 @@
                 <p> <%= errors[oneError].msg %> </p>
             <% } %>
         <% } %>  -->
-            <h2 style="margin: 20px;">Creá tu cuenta</h2>
-            <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/user/login">iniciá sesión</a>
-            </p>
-            <div class="errores">
-                <ul>
-
-                </ul>
-            </div>
-            <form method="POST" action="/user/register" enctype="multipart/form-data" class="register">
-                <div class="formbox">
-                    <div class="primeralinea">
-                        <div class="div-form-left">
-                            <input type="text" name="fullName" id="fullName" placeholder="Nombre y apellido"
-                                class="<%= locals.errors && errors.fullName ? " is-invalid" : null %> izquierda"
+        <h2 style="margin: 20px;">Creá tu cuenta</h2>
+        <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/user/login">iniciá sesión</a></p>
+        <div class="erroresFront">
+            <ul></ul>
+        </div>
+        <form method="POST" enctype="multipart/form-data" action="/user/register" class="register">
+            <div class="formbox">
+                <div class="primeralinea">
+                    <div class="div-form-left">
+                        <input 
+                            type="text" 
+                            name="fullName" 
+                            id="fullName" 
+                            placeholder="Nombre y apellido" 
+                            class="<%= locals.errors && errors.fullName ? "is-invalid" : null %> izquierda" 
                             value="<%= locals.oldData ? oldData.fullName : null %>"
                                 >
                                 <% if (locals.errors && errors.fullName) { %>
