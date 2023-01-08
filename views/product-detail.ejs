@@ -13,14 +13,10 @@
         <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
     </div>
     <%- include('./partials/header.ejs') %>
-    
+
         <div class="box-product-detail">
             <div class="box1">
-                <% if(products.categories){ %>
-                    <p class="category-detail">Categoría / <%- products.categories.name %>
-                    </p>
-                    <% } %>
-                        <img src="/images/products-img/<%= products.filename || "producto-sin-foto.jpeg" %>" >
+                <img class= "image-detail" src="/images/products-img/<%= products.filename || " producto-sin-foto.jpeg" %>" >
             </div>
             <div class="box2">
                 <ul style="list-style-type:none">
@@ -28,15 +24,16 @@
                         <%- products.name %>
                     </li>
                     <li class="price-detail">
-                        <%- products.price %> $
+                        $<%- products.price %>
                     </li>
                     <li class="description-detail">
                         <%- products.description %>
                     </li>
-                 <li class="vermas">
-                        <% if(locals.isLogged) { %> 
-                            <a class="boton-edicion" href="/productos/editar/<%- products.id %>">Editar producto</a>
-                            <% } %> 
+                    <li class="vermas">
+                        <% if(locals.isLogged && user.privilege == 'administrador' ) { %>
+                            <a class="boton-edicion" href="/productos/editar/<%= products.id %>">Editar producto</a>
+                            <% } %>
+                        </li>
                 </ul>
                 <a href="/carrito">
                     <p class="add-cart">Agregar al carrito</p>

@@ -8,38 +8,52 @@ window.addEventListener("load", function () {
     let campoPassword = document.querySelector("#password");
     let erroresFront  = document.querySelector("div.erroresFront ul")
     let errores = [];
+    erroresFront.innerHTML = "";
+
 
     console.log(campoAvatar.value);
 
     if (campoNombre.value == "") {
-      errores.push("Ingresá tu nombre");
-
+      errores.push("Campo Nombre no puede estar vacio");
+      //alert("Campo Nombre no puede estar vacio");
     } else if (campoNombre.value.length < 3) {
-      errores.push("Tu nombre debe tener un mínimo de 2 caracteres");
+      errores.push("Campo Nombre debe tener un minimo de 3 caracteres");
+      //alert("Campo Nombre debe tener un minimo de 3 caracteres");
     }
+
     if (campoEmail.value == "") {
-      errores.push("Ingresá un email");
+      errores.push("Campo Email no puede estar vacio");
+      //alert("Campo Email no puede estar vacio");
     }
+    //Como validar un mail con Frontend que sea mail??
+    // else if (campoEmail.value.length < 3) {
+    //     alert("Campo Nombre debe tener un minimo de 3 caracteres")
+    // }
 
     if (campoPassword.value == "") {
-      errores.push("Ingresá una contranseña");
-    } else if (campoPassword.value.length < 9) {
-      errores.push("Tu contraseña debe contener un mínimo de 8 caracteres");
+      errores.push("Campo Password no puede estar vacio");
+      //alert("Campo Contraseña no puede estar vacia");
+    } else if (campoPassword.value.length < 8) {
+      errores.push("Campo Contraseña debe tener minimo 8 caracteres");
+      //alert("Campo Contraseña debe tener minimo 8 caracteres");
     }
 
     if (campoAvatar.value == "") {
-      errores.push("Ingresá una imágen de perfil");
-    }
+      errores.push("Debe incluir una imagen");
+      //alert("Debe incluir una imagen");
+    } 
+    
 
     if (errores.length > 0) {
 
       e.preventDefault();
-      let ulErrores = document.querySelector('div.errores ul');
-      for (let i = 0; i < errores.length; i++) {
-        ulErrores.innerHTML += '<li>' + errores[i] + '</li>'
+
+      let erroresFront  = document.querySelector("div.erroresFront ul");
+      for (let i = 0; i < errores.length ; i++) {
+        erroresFront.innerHTML += "<li>" + errores[i] + "</li>"
       }
     }
 
-
+    
   });
 });

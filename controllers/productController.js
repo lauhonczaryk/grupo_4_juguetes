@@ -9,12 +9,14 @@ const productController = {
         res.render('product-options');
     },
     list: async function (req, res) {
-        const products = await db.Products.findAll({include: ['categories']})
-        res.render('menu-products', { products });
+        const products = await db.Products.findAll({ include: ['categories'] })
+        res.render('menu-products', { products,
+            user: req.session.userLogged,
+        });
     },
     detail: async function (req, res) {
         const productoEncontrado = await db.Products.findByPk(req.params.id)
-        res.render('product-detail', { products: productoEncontrado });
+        res.render('product-detail', { products: productoEncontrado,  user: req.session.userLogged });
     },
     crear: function (req, res) {
         res.render('create');
@@ -28,7 +30,6 @@ const productController = {
             filename: req.file.filename,
         })
             .then(() => {
-                alert('Creado existosamente')
                 res.redirect('/productos/crear')
             })
     },
@@ -65,52 +66,52 @@ const productController = {
         const products = await db.Products.findAll({ order: [['price', 'DESC']] });
         res.render("menu-products", { products: products });
     },
-    videojuegos: async function(req, res) {
+    videojuegos: async function (req, res) {
         const products = await db.Products.findAll({
-            where: {category_id: 1}
+            where: { category_id: 1 }
         })
         res.render("menu-products", { products: products });
     },
-    airelibre: async function(req, res) {
+    airelibre: async function (req, res) {
         const products = await db.Products.findAll({
-            where: {category_id: 2}
+            where: { category_id: 2 }
         })
         res.render("menu-products", { products: products });
     },
-    demesa: async function(req, res) {
+    demesa: async function (req, res) {
         const products = await db.Products.findAll({
-            where: {category_id: 3}
+            where: { category_id: 3 }
         })
         res.render("menu-products", { products: products });
     },
-    juguetes: async function(req, res) {
+    juguetes: async function (req, res) {
         const products = await db.Products.findAll({
-            where: {category_id: 4}
+            where: { category_id: 4 }
         })
         res.render("menu-products", { products: products });
     },
-    menos2000: async function(req, res) {
+    menos2000: async function (req, res) {
         const products = await db.Products.findAll({
-            where: {price: {[Op.lte]: '2000'}}
+            where: { price: { [Op.lte]: '2000' } }
         })
         res.render("menu-products", { products: products });
     },
-    menos4000: async function(req, res) {
+    menos4000: async function (req, res) {
         const products = await db.Products.findAll({
-            where: {price: {[Op.lte]: '4000'}}
+            where: { price: { [Op.lte]: '4000' } }
         })
         res.render("menu-products", { products: products });
     },
-    menos6000: async function(req, res) {
+    menos6000: async function (req, res) {
         const products = await db.Products.findAll({
-            where: {price: {[Op.lte]: '6000'}}
+            where: { price: { [Op.lte]: '6000' } }
         })
         res.render("menu-products", { products: products });
     },
-    buscador: async function(req, res) {
+    buscador: async function (req, res) {
         console.log(req.query.toys);
         const products = await db.Products.findAll({
-            where: {name: { [Op.like]: `%${req.query.toys}%` }}
+            where: { name: { [Op.like]: `%${req.query.toys}%` } }
         })
         res.render("menu-products", { products: products });
     },

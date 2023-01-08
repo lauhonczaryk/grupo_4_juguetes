@@ -8,9 +8,10 @@
           let campoImagen = document.querySelector("#image");
           let campoCategory = document.querySelector("#category");
           let campoPrice = document.querySelector("#price");
+          let erroresFront  = document.querySelector("div.erroresFront ul");
           let errores = [];
-      
-          //console.log(campoAvatar.value);
+          erroresFront.innerHTML = "";
+       
       
           if (campoName.value == "") {
             errores.push("Ingresá el nombre del producto");
@@ -36,12 +37,15 @@
           }
       
           if (errores.length > 0) {
+
             e.preventDefault();
-            let ulErrorProducts = document.querySelector('div.errorProducts ul');
-                 for(let i = 0; i < errores.length; i++ ){
-              ulErrorProducts.innerHTML += '<li>'+ errores[i] +'</li>'
+      
+            let erroresFront  = document.querySelector("div.erroresFront ul");
+            for (let i = 0; i < errores.length ; i++) {
+              erroresFront.innerHTML += "<li>" + errores[i] + "</li>"
             }
           }
+      
       
       
         });

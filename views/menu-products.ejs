@@ -3,40 +3,53 @@
 
 <head>
     <%- include('./partials/head.ejs') %>
-        <title>Listado de productos</title>
+        <title>Productos</title>
 </head>
 
-<body >
+<body>
     <div class="cartelfixed">
         <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
     </div>
     <%- include('./partials/header.ejs') %>
-    
-        <h2 class="titulomenu">Productos</h2>
         <div class="todolistar">
             <div class="filtros">
                 <div class="categorias">
-                    <ul>Categorías:</ul>
-                    <li><input type="radio" id="airelibre">
-                        <label for="airelibre"><a href="/productos/airelibre">Aire libre</a></label>
-                    </li>
-                    <li><input type="radio" id="video">
-                      <a href="/productos/videojuegos"></a>  <label for="video">Videojuegos</label></a>
-                    </li>
-                    <li><input type="radio" id="demesa">
-                        <label for="demesa"><a href="/productos/demesa">Juegos de mesa</a></label>
-                    </li>
-                    <li><input type="radio" id="juguetes">
-                        <label for="juguetes"><a href="/productos/juguetes">Juguetes</a></label>
-                    </li>
+                    <ul>
+                        <p><strong>Categorías</strong></p>
+                        <li><a href="/productos/airelibre">Aire libre</a>
+                            <hr>
+                        </li>
+                        <li>
+                            <a href="/productos/videojuegos">Videojuegos</a>
+                            <hr>
+                        </li>
+                        <li><a href="/productos/demesa">Juegos de mesa</a>
+                            <hr>
+                        </li>
+                        <li><a href="/productos/juguetes">Juguetes</a>
+                            <hr>
+                        </li>
+                    </ul>
                 </div>
                 <div class="ordenar">
-                    <ul>Ordenar:</ul>
-                    <li><a href="/productos/asc">De menor a mayor</a></li>
-                    <li><a href="/productos/dsc">De mayor a menor</a></li>
-                    <li><a href="/productos/menos2000">Hasta de $2000</a></li>
-                    <li><a href="/productos/menos4000">Hasta de $4000</a></li>
-                    <li><a href="/productos/menos6000">Hasta de $6000</a></li>
+                    <ul>
+                        <p><strong>Ordenar</strong></p>
+                        <li><a href="/productos/asc">De menor a mayor</a>
+                            <hr>
+                        </li>
+                        <li><a href="/productos/dsc">De mayor a menor</a>
+                            <hr>
+                        </li>
+                        <li><a href="/productos/menos2000">Hasta de $2000</a>
+                            <hr>
+                        </li>
+                        <li><a href="/productos/menos4000">Hasta de $4000</a>
+                            <hr>
+                        </li>
+                        <li><a href="/productos/menos6000">Hasta de $6000</a>
+                            <hr>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="box-allproducts">
@@ -58,6 +71,11 @@
                         <a href="/carrito">
                             <p class="add-cart">Agregar al carrito</p>
                         </a>
+                        <div class="editarr">
+                            <% if(locals.isLogged && user.privilege == 'administrador' ) { %>
+                                <a class="boton-edicion" href="/productos/editar/<%= producto.id %>">Editar</a>
+                                <% } %>
+                        </div>
                     </div>
                     <% }) %>
             </div>

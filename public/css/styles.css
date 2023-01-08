@@ -286,11 +286,16 @@ div.burger-menu i {
                 6px 6px 0 0 #4a69bd*/
 }
 /*
-.boton-registro span,
-.boton-login span {
-    
-}*/
+span .material-symbols-outlined {
 
+}*/
+.erroresFront ul li{
+color: red;
+text-align: center;
+list-style: none;
+font-family: Arial, Helvetica, sans-serif;
+margin-bottom: 10px;
+}
 /*main*/
 .carrusel {
     width: 100%;
@@ -546,30 +551,42 @@ footer img {
 
 .todolistar {
     display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+background-image: url("/images/iconos3.png");
+background-repeat: repeat;
+background-size: 500px;
 
 }
 
 .filtros {
     background-color: #ebebeb;
-    width: 220px;
+    width: 14%;
     line-height: normal;
-    list-style: none;
-    padding: 15px;
+        padding: 15px;
     border-radius: 10px;
     justify-self: flex-start;
     margin-left: 30px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
+.filtros ul{
+   list-style: none; 
+ 
+}
+.categorias ul li a, .ordenar ul li a{
+    font-size: 18px;
+    
+}
+.categorias ul p, .ordenar ul p{
+    font-size: 22px;
+    text-align: left;
 
+}
 .filtros a {
     text-decoration: none;
     color: #000;
 }
-
-.filtros ul {
-    font-size: 20px;
-}
-
 .categorias {
     margin-bottom: 30px;
 }
@@ -578,6 +595,7 @@ footer img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 84%;
 }
 
 .box-product {
@@ -635,6 +653,7 @@ footer img {
     justify-content: center;
     width: 200px;
     height: 200px;
+    
 }
 
 .add-cart {
@@ -644,6 +663,7 @@ footer img {
     color: white;
     text-decoration: none;
     font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .idlistar {
@@ -653,7 +673,17 @@ footer img {
 .category {
     font-weight: bold;
 }
-
+.boton-edicion{
+    background-color: #e1d159;
+    border-radius: 10px;
+    padding: 10px;
+ align-items: center;
+}
+.editarr{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 /* MENU PRODUCTOS HOMEE*/
 .home {
     background-image: url("/images/iconos3.png");
@@ -753,13 +783,15 @@ footer img {
 .box-product-detail {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin-top: 30px;
 }
 
 .image-detail {
+  margin-top: 35px;
     width: 350px;
     height: 350px;
-    border-radius: 5px;
+    border-radius: 20px;
     margin-left: 60px;
     box-shadow: 0px 0px 10px 0px #FFE200;
 }
@@ -777,6 +809,7 @@ footer img {
 .name-detail {
     font-weight: bold;
     font-size: 60px;
+    width: 600px;
 }
 
 .price-detail {
@@ -804,7 +837,7 @@ footer img {
 .vermas {
     color: red;
     font-weight: bold;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .rutas-productos {
@@ -828,12 +861,22 @@ footer img {
 }
 
 /*USER PROFILE */
-
+.userFondo{
+    background-image: url("/images/iconos3.png");
+    background-repeat: repeat;
+    background-size: 500px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .userBox {
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 40px;
+    margin: 10px;
     background-color: #D9D9D9;
     width: 400px;
     border-radius: 30px;
@@ -843,7 +886,6 @@ footer img {
 .userHi {
     text-align: center;
     color: #000;
-    background-color: #4b69bd;
 }
 
 .userImage {
@@ -852,14 +894,22 @@ footer img {
     align-items: center;
 }
 
-.seguircomprando {
+.seguircomprando a {
+    
     background-color: #0000DD;
     border-radius: 30px;
     padding: 10px;
     color: white;
     text-decoration: none;
     font-size: 20px;
-    width: 200px
+    width: 200px;
+    text-align: center;
+}
+.seguircomprando{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 /*QUIENES SOMOS */
@@ -916,9 +966,9 @@ footer img {
 }
 
 @media (max-width: 540px) {
-    body {
-        background-color: red;
-    }
+   .filtros{
+    display: none;
+   }
 
     .banner {
         display: none;

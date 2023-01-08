@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Toys Planet</title>
-    <!-- HEAD -->
-    <%- include('./partials/head.ejs') %> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/27.1.0/jssor.slider.min.js"></script>
-</head>
 
-<body>
-    <div class="ofertasfixed">
-        <i class="fas fa-fire">OFERTAS del día!</i>
-    </div>
-    <div class="cartel-contenedor">
-        <div class="cartelfixed">
-            <p>Con tu compra superior a $7500, tenés envío gratis</p>
-        </div>
-    </div>
-    <!-- HEADER -->
-    <%- include('./partials/header.ejs') %> 
-    <br><br>
-            <div  class="userBox" style="margin: 0 auto">
-                <div class="row" style="text-align: center;">
-                    <div class="col-md-3">
-                        <h2 class="userHi">Hola <%= user.fullName %> !</h2>
-                        <br>
-                            <img class="userImage" src="/images/avatars/<%= user.avatar %>">
-                        <br>
-                        <br>
-                        <div class="userEmail"><%= user.email %></div>
-                        <div class="userEmail"><%= user.privilege %></div>
-                        
+<head>
+    <title>Perfil</title>
+    <!-- HEAD -->
+    <%- include('./partials/head.ejs') %>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jssor-slider/27.1.0/jssor.slider.min.js"></script>
+</head>
+<div class="cartelfixed">
+    <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
+</div>
+<%- include('./partials/header.ejs') %>
+<body class="userFondo">
+        <div class="container">
+        <div class="userBox">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="userHi">¡Hola <%= user.name %>!</h2>
+                    <br>
+                    <img class="userImage" src="/images/avatars/<%= user.avatar %>">
+                    <br>
+                    <br>
+                    <div class="userEmail">
+                        <%= user.email %>
                     </div>
+                    <!--<div class="userEmail"><%= user.privilege %></div> -->
+  </div>
+</div>
                 </div>
             </div>
-            <a class="seguircomprando" href="/productos/listar" >Seguir comprando</a>
-            <footer>
+            <div class="seguircomprando">
+            <a href="/productos/listar">Seguir comprando</a>
+      </div>
+        <footer>
             <!-- FOOTER -->
-    <%- include('./partials/footer.ejs') %>  
-</footer>
+            <%- include('./partials/footer.ejs') %>
+        </footer>
 </body>
+
 </html>
