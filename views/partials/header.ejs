@@ -7,26 +7,16 @@
                 <form class="search-bar" method="GET" action="/productos/buscar">
                     <input class="fontAwesome" type="search" name="toys" placeholder="Buscar producto..."
                         aria-label="Search">
-                    <button class="button-buscar" type="submit">Buscar</button>
-                    <button class="button-buscar-mobile" type="submit"><span class="material-symbols-outlined">
-                        search
-                        </span></button>
+                    <button class="button-buscar" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class="button-buscar-mobile" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
                 <div class="botones-nav">
                     <% if(!locals.isLogged) { %>
-                        <a class="boton-registro" href="/user/register"><span class="material-symbols-outlined">
-                            account_box
-                            </span>Registro</a>
-                        <a class="boton-login" href="/user/login"><span class="material-symbols-outlined">
-                            login
-                            </span>Inicio Sesión</a>
+                        <a class="boton-registro" href="/user/register"><i class="fa-solid fa-circle-user"></i> Registro</a>
+                        <a class="boton-login" href="/user/login"><i class="fa-solid fa-right-to-bracket"></i> Inicio Sesión</a>
                         <% } else { %>
-                            <a class="boton-registro" href="/user/logout"><span class="material-symbols-outlined">
-                                logout
-                                </span>Cerrar Sesión</a>
-                            <a class="boton-registro" href="/user/profile"><span class="material-symbols-outlined">
-                                person
-                                </span>Perfil: <%= locals.userLogged.name %> </a>
+                            <a class="boton-registro" href="/user/logout"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</a>
+                            <a class="boton-registro" href="/user/profile"><i class="fa-solid fa-user"></i> Perfil: <%= locals.userLogged.name %> </a>
                             <% } %>
                 </div>
             </nav>
@@ -50,9 +40,7 @@
     <div class="menu-mobile"> 
         <ul >
         <li><a href="/productos/listar">Productos</a></li>
-        <li ><a href="/user/login"><span class="material-symbols-outlined">
-            person
-            </span></a></li>
+        <li ><a href="/user/login"><i class="fa-solid fa-right-to-bracket"></i> <i class="fa-solid fa-user"></i></a></li>
     </ul>
     </div>
 </header>
