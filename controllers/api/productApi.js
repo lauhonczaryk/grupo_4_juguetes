@@ -54,7 +54,35 @@ const apiProductController = {
         res.json(respuesta);
         //console.log(respuesta)
         })
-        }
+        },
+
+    random:  (req,res) => {
+            db.Products.findAll()
+            .then (products => { 
+                
+                function getRandomItem(arr) {
+                    // get random index value
+                    const randomIndex = Math.floor(Math.random() * arr.length);
+                    // get random item
+                    const item = arr[randomIndex];
+                    return item;
+                }
+
+                const productRandom = getRandomItem(products);
+                console.log(productRandom);
+
+                let respuesta = {
+                    meta: {
+                        status : 200,
+                        total: products.length,
+                        url: 'api/users'
+                    },
+                    data: productRandom
+                }
+            res.json(respuesta);
+            //console.log(respuesta)
+            })
+            }    
     
 }
 
