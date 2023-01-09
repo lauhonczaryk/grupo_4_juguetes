@@ -38,7 +38,23 @@ const apiProductController = {
         }
     res.json(respuesta);
    // console.log(respuesta)
-    })}
+    })},
+    last:  (req,res) => {
+        db.Products.findAll()
+        .then (products => { 
+            lastProduct = products.pop();
+            let respuesta = {
+                meta: {
+                    status : 200,
+                    total: products.length,
+                    url: 'api/users'
+                },
+                data: lastProduct
+            }
+        res.json(respuesta);
+        //console.log(respuesta)
+        })
+        }
     
 }
 
