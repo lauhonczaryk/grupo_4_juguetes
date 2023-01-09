@@ -9,28 +9,15 @@ window.addEventListener("load", function () {
     let errores = [];
     erroresFront.innerHTML = "";
 
-
-    
-
-   
-
     if (campoEmail.value == "") {
-      errores.push("Campo Email no puede estar vacio");
-      //alert("Campo Email no puede estar vacio");
+      errores.push("Ingresá tu email");
     }
-    //Como validar un mail con Frontend que sea mail??
-    // else if (campoEmail.value.length < 3) {
-    //     alert("Campo Nombre debe tener un minimo de 3 caracteres")
-    // }
-
-    if (campoPassword.value == "") {
-      errores.push("Campo Password no puede estar vacio");
-      //alert("Campo Contraseña no puede estar vacia");
-    } else if (campoPassword.value.length < 8) {
+      if (campoPassword.value == "") {
+      errores.push("Ingresá tu contraseña");
+    } /*else if (campoPassword.value.length < 8) {
       errores.push("Campo Contraseña debe tener minimo 8 caracteres");
-      //alert("Campo Contraseña debe tener minimo 8 caracteres");
     }
-
+*/
     
     if (errores.length > 0) {
 

@@ -5,17 +5,12 @@
     <%- include('./partials/head.ejs') %> 
     <title>Inicio de sesión</title>
 </head>
-
-<body>
-    <div class="ofertasfixed">
-        <i class="fas fa-fire">OFERTAS del día!</i>
-    </div>
-    <div class="cartel-contenedor">
-        <div class="cartelfixed">
-            <p>Con tu compra superior a $7500, tenés envío gratis</p>
-        </div>
-    </div>
-    <%- include('./partials/header.ejs') %> 
+<div class="cartelfixed">
+    <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
+</div>
+<%- include('./partials/header.ejs') %>
+<body class="bodyform">
+    
     <section class="main-form">
         <h2 style="margin: 20px;">Iniciá sesión</h2>
         <p style="margin: 10px;">Si todavía no tenés cuenta, <a class="boton-opuesto" href="/user/register">Registrate</a></p>

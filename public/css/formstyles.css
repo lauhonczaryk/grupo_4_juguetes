@@ -6,7 +6,11 @@
     align-items: center;
     max-width: 700px;
 }
-
+.bodyform{
+    background-image: url("/images/iconos3.png");
+    background-repeat: repeat;
+    background-size: 500px;
+}
 h2 {
     color: #535353;
     font-size: 30px;
@@ -203,4 +207,25 @@ p {
 .checkbox-input:checked +.checkbox-box {
     background: #2266dc;
     border-color: #2266dc;
+}
+
+.errores ul {
+    color: red;
+    list-style : none;
+    text-align: center;
+  margin-bottom: 10px;
+}
+.errores ul li{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size: 15px;
+}
+.errorProducts ul {
+    color: red;
+    list-style : none;
+    text-align: center;
+  margin-bottom: 10px;
+}
+.errorProducts ul li{
+      font-family:Arial, Helvetica, sans-serif;
+      font-size: 15px;
 }

@@ -5,29 +5,20 @@
     <%- include('./partials/head.ejs') %>
         <title>Registro</title>
 </head>
-
-<body>
-    <div class="ofertasfixed">
-        <i class="fas fa-fire">OFERTAS del día!</i>
+<div class="cartelfixed">
+    <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
+</div>
+<%- include('./partials/header.ejs') %>
+<body class="bodyform">
+    <div class="erroresFront">
+        <ul></ul>
     </div>
-    <div class="cartel-contenedor">
-        <div class="cartelfixed">
-            <p>Con tu compra superior a $7500, tenés envío gratis</p>
-        </div>
-    </div>
-    <%- include('./partials/header.ejs') %>
         <section class="main-form">
-            <!-- MOSTRAR ERRORES -->
-            <!-- <% if (locals.errors) { %>
-            <% for( let oneError in errors ) { %>
-                <p> <%= errors[oneError].msg %> </p>
-            <% } %>
-        <% } %>  -->
+            <!-- MOSTRAR ERRORES
+             -->
         <h2 style="margin: 20px;">Creá tu cuenta</h2>
         <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/user/login">iniciá sesión</a></p>
-        <div class="erroresFront">
-            <ul></ul>
-        </div>
+        
         <form method="POST" enctype="multipart/form-data" action="/user/register" class="register">
             <div class="formbox">
                 <div class="primeralinea">
@@ -100,7 +91,7 @@
                 </div>
             </form>
         </section>
-        <!-- <script src="/js/validacionUsuariosFront.js"></script> -->
+       <script src="/js/validacionUsuariosFront.js"></script>
 </body>
 <%- include('./partials/footer.ejs') %>
 

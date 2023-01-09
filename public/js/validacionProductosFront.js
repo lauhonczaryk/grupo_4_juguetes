@@ -1,61 +1,54 @@
-window.addEventListener("load", function(event){
-    let formulario = document.querySelector("form.register");
 
-  formulario.addEventListener("submit", function (e) {
-    let campoNombre = document.querySelector("#name");
-    let campoAvatar = document.querySelector("#avatar");
-    let campoDescripción = document.querySelector("#description");
-    let campoPrecio = document.querySelector("#price");
-    let erroresFront  = document.querySelector("div.erroresFront ul")
-    let errores = [];
-    erroresFront.innerHTML = "";
+    window.addEventListener("load", function () {
+        let formulario = document.querySelector("form.register");
+      //productossssssssssss
+        formulario.addEventListener("submit", function (e) {
+          let campoName = document.querySelector("#name");
+          let campoDescription = document.querySelector("#description");
+          let campoImagen = document.querySelector("#image");
+          let campoCategory = document.querySelector("#category");
+          let campoPrice = document.querySelector("#price");
+          let erroresFront  = document.querySelector("div.erroresFront ul");
+          let errores = [];
+          erroresFront.innerHTML = "";
+       
+      
+          if (campoName.value == "") {
+            errores.push("Ingresá el nombre del producto");
+      
+          } else if (campoName.value.length < 6) {
+            errores.push("El nombre del producto debe tener mínimo 5 caractéres");
+          }
+          if (campoDescription.value == "") {
+            errores.push("Ingresá una descrpción para este producto");
+          }else if (campoDescription.value.length < 21) {
+            errores.push("La descripción del producto debe tener mínimo 20 caractéres");
+          }
+      
+          if (campoImagen.value == "") {
+            errores.push("Ingresá la foto del producto");
+          }
+      
+          if (campoCategory.value == "") {
+            errores.push("Ingresá el ID de la categoría correspondiente: 1(Videojuegos) - 2(Aire libre) - 3(Juegos de mesa) - 4(Juguetes)'");
+          }
+          if (campoPrice.value == "") {
+            errores.push("Ingresá un precio (sin comas, puntos ni símbolos)");
+          }
+      
+          if (errores.length > 0) {
 
-
-    console.log(campoAvatar.value);
-
-    if (campoNombre.value == "") {
-      errores.push("Campo Nombre no puede estar vacio");
-      //alert("Campo Nombre no puede estar vacio");
-    } else if (campoNombre.value.length < 3) {
-      errores.push("Campo Nombre debe tener un minimo de 3 caracteres");
-      //alert("Campo Nombre debe tener un minimo de 3 caracteres");
-    }
-
-    if (campoDescripción.value == "") {
-      errores.push("Campo Email no puede estar vacio");
-      //alert("Campo Email no puede estar vacio");
-    }
-
-    if (campoPrecio.value == "") {
-        errores.push("Campo Email no puede estar vacio");
-        //alert("Campo Email no puede estar vacio");
-      }
-   
-
-    if (campoPassword.value == "") {
-      errores.push("Campo Password no puede estar vacio");
-      //alert("Campo Contraseña no puede estar vacia");
-    } else if (campoPassword.value.length < 8) {
-      errores.push("Campo Contraseña debe tener minimo 8 caracteres");
-      //alert("Campo Contraseña debe tener minimo 8 caracteres");
-    }
-
-    if (campoAvatar.value == "") {
-      errores.push("Debe incluir una imagen");
-      //alert("Debe incluir una imagen");
-    } 
-    
-
-    if (errores.length > 0) {
-
-      e.preventDefault();
-
-      let erroresFront  = document.querySelector("div.erroresFront ul");
-      for (let i = 0; i < errores.length ; i++) {
-        erroresFront.innerHTML += "<li>" + errores[i] + "</li>"
-      }
-    }
+            e.preventDefault();
+      
+            let erroresFront  = document.querySelector("div.erroresFront ul");
+            for (let i = 0; i < errores.length ; i++) {
+              erroresFront.innerHTML += "<li>" + errores[i] + "</li>"
+            }
+          }
+      
+      
+      
+        });
+      });
 
     
-  });
-});

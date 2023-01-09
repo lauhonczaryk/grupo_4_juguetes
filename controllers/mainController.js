@@ -26,6 +26,9 @@ const controller = {
     },
     carrito: function (req, res) {
         res.render('carrito');
+    },
+    preguntas: function (req, res) {
+        res.render('preguntas');
     }
 }
 
