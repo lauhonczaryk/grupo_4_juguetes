@@ -14,33 +14,27 @@ window.addEventListener("load", function () {
     console.log(campoAvatar.value);
 
     if (campoNombre.value == "") {
-      errores.push("Campo Nombre no puede estar vacio");
-      //alert("Campo Nombre no puede estar vacio");
+      errores.push("Ingresá un nombre");
+
     } else if (campoNombre.value.length < 3) {
-      errores.push("Campo Nombre debe tener un minimo de 3 caracteres");
+      errores.push("El nombre debe tener mínimo 3 caracteres");
       //alert("Campo Nombre debe tener un minimo de 3 caracteres");
     }
 
     if (campoEmail.value == "") {
-      errores.push("Campo Email no puede estar vacio");
-      //alert("Campo Email no puede estar vacio");
+      errores.push("Ingresá un email");
+
     }
-    //Como validar un mail con Frontend que sea mail??
-    // else if (campoEmail.value.length < 3) {
-    //     alert("Campo Nombre debe tener un minimo de 3 caracteres")
-    // }
+
 
     if (campoPassword.value == "") {
-      errores.push("Campo Password no puede estar vacio");
-      //alert("Campo Contraseña no puede estar vacia");
+      errores.push("Ingresá una contraseña");
     } else if (campoPassword.value.length < 8) {
-      errores.push("Campo Contraseña debe tener minimo 8 caracteres");
-      //alert("Campo Contraseña debe tener minimo 8 caracteres");
+      errores.push("La contraseña debe tener mínimo 8 caracteres");
     }
 
     if (campoAvatar.value == "") {
-      errores.push("Debe incluir una imagen");
-      //alert("Debe incluir una imagen");
+      errores.push("Agregá una imagen de perfil");
     } 
     
 

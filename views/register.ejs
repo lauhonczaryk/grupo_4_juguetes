@@ -10,15 +10,12 @@
 </div>
 <%- include('./partials/header.ejs') %>
 <body class="bodyform">
-    <div class="erroresFront">
-        <ul></ul>
-    </div>
         <section class="main-form">
-            <!-- MOSTRAR ERRORES
-             -->
         <h2 style="margin: 20px;">Creá tu cuenta</h2>
         <p style="margin: 10px;">Si ya tenés cuenta, <a class="boton-opuesto" href="/user/login">iniciá sesión</a></p>
-        
+        <div class="erroresFront">
+            <ul></ul>
+        </div>
         <form method="POST" enctype="multipart/form-data" action="/user/register" class="register">
             <div class="formbox">
                 <div class="primeralinea">

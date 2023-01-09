@@ -12,31 +12,39 @@
     <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
 </div>
 <%- include('./partials/header.ejs') %>
-<body class="userFondo">
+
+    <body class="userFondo">
         <div class="container">
-        <div class="userBox">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2 class="userHi">¡Hola <%= user.name %>!</h2>
-                    <br>
-                    <img class="userImage" src="/images/avatars/<%= user.avatar %>">
-                    <br>
-                    <br>
-                    <div class="userEmail">
-                        <%= user.email %>
+            <div class="userBox">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h2 class="userHi">¡Hola <%= user.name %>!</h2>
+                        <br>
+                        <img class="userImage" src="/images/avatars/<%= user.avatar %>">
+                        <br>
+                        <br>
+                        <div class="userEmail">
+                            <%= user.email %>
+                        </div>
+                        <!--<div class="userEmail"><%= user.privilege %></div> -->
                     </div>
-                    <!--<div class="userEmail"><%= user.privilege %></div> -->
-  </div>
-</div>
                 </div>
             </div>
-            <div class="seguircomprando">
-            <a href="/productos/listar">Seguir comprando</a>
-      </div>
+        </div>
+        <div class="botonvariado">
+            <% if(locals.isLogged && user.privilege=='administrador' ) { %>
+                <div class="seguircomprando">
+                <a href="/productos/crear" >Crear producto</a></div>
+                <div class="seguircomprando"><a  href="/productos/listar" >Editar productos</a></div>
+                <% } else{ %>
+                  <div class="seguircomprando"><a  href="/productos/listar" >Seguir comprando</a></div>
+    
+                        <% } %>
+        </div>
         <footer>
             <!-- FOOTER -->
             <%- include('./partials/footer.ejs') %>
         </footer>
-</body>
+    </body>
 
 </html>

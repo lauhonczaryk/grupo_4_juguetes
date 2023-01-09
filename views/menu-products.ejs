@@ -10,7 +10,9 @@
     <div class="cartelfixed">
         <p>Con tu compra superior a $7500, tenés <strong>envío gratis</strong></p>
     </div>
+    <div class="headermenu">
     <%- include('./partials/header.ejs') %>
+    </div>
         <div class="todolistar">
             <div class="filtros">
                 <div class="categorias">
@@ -68,13 +70,14 @@
                                 $<%- producto.price %>
                             </li>
                         </ul>
-                        <a href="/carrito">
-                            <p class="add-cart">Agregar al carrito</p>
-                        </a>
                         <div class="editarr">
-                            <% if(locals.isLogged && user.privilege == 'administrador' ) { %>
+                            <% if(locals.isLogged && user.privilege=='administrador' ) { %>
                                 <a class="boton-edicion" href="/productos/editar/<%= producto.id %>">Editar</a>
-                                <% } %>
+                                <% } else{ %>
+                                    <a href="/carrito">
+                                        <p class="add-cart">Agregar al carrito</p>
+                                    </a>
+                                    <% } %>
                         </div>
                     </div>
                     <% }) %>
