@@ -28,7 +28,7 @@ const productController = {
             filename: req.file.filename,
         })
             .then(() => {
-                alert('Creado existosamente')
+                // alert('Creado existosamente')
                 res.redirect('/productos/crear')
             })
     },

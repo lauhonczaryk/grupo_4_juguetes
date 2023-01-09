@@ -4,6 +4,9 @@ const path = require('path');
 const methodOverride =  require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
+var cors = require('cors')
+
+
 
 //ruta APIS
 
@@ -18,6 +21,10 @@ const userRouter = require('./routes/userRouter');
 
 // ************ express() - (don't touch) ************
 const app = express();
+
+//Cors
+
+app.use(cors());
 
 // ************ Middlewares - (don't touch) ************
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
@@ -52,8 +59,8 @@ app.use((req, res, next)=> {
     res.status(404).render('not-found')
 })
 
-app.listen(process.env.PORT || 3000, () =>{
-    console.log("Serving on port 3000!   http://localhost:3000/");
+app.listen(process.env.PORT || 3005, () =>{
+    console.log("Serving on port 3005!   http://localhost:3005/");
 })
 
 
