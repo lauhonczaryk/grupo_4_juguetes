@@ -8,6 +8,9 @@
                     <input class="fontAwesome" type="search" name="toys" placeholder="Buscar producto..."
                         aria-label="Search">
                     <button class="button-buscar" type="submit">Buscar</button>
+                    <button class="button-buscar-mobile" type="submit"><span class="material-symbols-outlined">
+                        search
+                        </span></button>
                 </form>
                 <div class="botones-nav">
                     <% if(!locals.isLogged) { %>
@@ -41,14 +44,15 @@
             <li><a href="/">Inicio</a></li>
             <li><a href="/productos/listar">Productos</a></li>
             <li><a href="/quienes-somos">¿Quiénes somos?</a></li>
-            <li><a href="/productos/listar">Preguntas frecuentes</a></li>
+            <li><a href="/preguntas">Preguntas frecuentes</a></li>
         </ul>
     </div>
     <div class="menu-mobile"> 
         <ul >
         <li><a href="/productos/listar">Productos</a></li>
-        <li ><a href="/user/login">Inicio sesión</a></li>
-        <li ><a href="/user/register">Registro</a></li>
+        <li ><a href="/user/login"><span class="material-symbols-outlined">
+            person
+            </span></a></li>
     </ul>
     </div>
 </header>
