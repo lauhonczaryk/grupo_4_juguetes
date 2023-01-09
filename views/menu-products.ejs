@@ -74,9 +74,15 @@
                             <% if(locals.isLogged && user.privilege=='administrador' ) { %>
                                 <a class="boton-edicion" href="/productos/editar/<%= producto.id %>">Editar</a>
                                 <% } else{ %>
-                                    <a href="/carrito">
+                                    <% if(!locals.isLogged) { %>
+                                        <a href="/user/login">
+                                            <p class="add-cart">Agregar al carrito</p>
+                                        </a>
+                                        <% } else{ %>
+                                          <a href="/carrito">
                                         <p class="add-cart">Agregar al carrito</p>
                                     </a>
+                                            <% } %>
                                     <% } %>
                         </div>
                     </div>

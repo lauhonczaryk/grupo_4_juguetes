@@ -56,7 +56,7 @@ main {
     border-radius: 10px;
     border: 1px solid black;
 }
-
+/*ANIMACION*/
 .ofertasfixed {
     position: fixed;
     right: 20px;
@@ -128,9 +128,10 @@ header {
     color: rgb(7, 7, 7);
     font-size: 20px;
     font-weight: 600;
-
 }
-
+.downheader ul li a:hover {
+    color: #0000DD;
+}
 .cart i {
     text-align: center;
     display: flex;
@@ -287,6 +288,10 @@ div.burger-menu i {
                 5px 5px 0 0 #4a69bd,
                 6px 6px 0 0 #4a69bd*/
 }
+.boton-registro:hover,
+    .boton-login:hover {
+        text-decoration: underline;
+    }
 
 /*
 span .material-symbols-outlined {
@@ -590,7 +595,10 @@ footer img {
     font-size: 18px;
 
 }
-
+.categorias ul li a:hover,
+.ordenar ul li a:hover {
+   color: rgb(77, 77, 77);
+}
 .categorias ul p,
 .ordenar ul p {
     font-size: 22px;
@@ -680,6 +688,10 @@ footer img {
     text-decoration: none;
     font-size: 16px;
     margin-bottom: 5px;
+    transition: 200ms;
+}
+.add-cart:hover{
+    width: 180px;
 }
 
 .idlistar {
@@ -853,7 +865,19 @@ footer img {
     margin-bottom: 13px;
 }
 
-
+.add-cart-detail {
+    background-color: #00B212;
+    border-radius: 20px;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+    transition: 200ms;
+}
+.add-cart-detail:hover{
+    font-weight: bold;
+}
 
 .rutas-productos {
     text-align: center;
@@ -907,7 +931,7 @@ footer img {
 
 .userImage {
     width: 200px;
-    border-radius: 30px;
+    border-radius: 50%;
     align-items: center;
 }
 
@@ -986,6 +1010,15 @@ background-color: #b3f3b9;
 padding: 10px;
 }
 
+/*QUIENES*/
+.img-quienes{
+    width: 100%;
+}
+.quienes p{
+    font-size: 25px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
 /* MEDIA QUERIES */
 
 @media (min-width: 361px) {}
@@ -1045,12 +1078,17 @@ padding: 10px;
     .search-bar {
         height: 30px;
     }
-
     #circuloazul,
     #circulorojo,
     #circuloverde,
     #circuloamarillo {
         height: 150px;
+    }
+    #circuloazul:hover,
+    #circulorojo:hover,
+    #circuloverde:hover,
+    #circuloamarillo:hover {
+        display: none;
     }
 
     .pricebox {

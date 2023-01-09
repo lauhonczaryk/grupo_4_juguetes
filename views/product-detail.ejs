@@ -32,17 +32,20 @@
                     </li>
                 </ul>
                 <div>
-                    <a href="/carrito">
-                        <p class="add-cart">Agregar al carrito</p>
+                    <% if(!locals.isLogged) { %>
+                        <a href="/user/login">
+                            <p class="add-cart-detail">Agregar al carrito</p>
+                        </a>
+                        <% } else{ %>
+                          <a href="/carrito">
+                        <p class="add-cart-detail">Agregar al carrito</p>
                     </a>
+                            <% } %>
+                    
                 </div>
 
             </div>
         </div>
-
-
-
-
         <%- include('./partials/footer.ejs') %>
 
 </body>

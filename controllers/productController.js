@@ -60,60 +60,60 @@ const productController = {
     },
     asc: async function (req, res) {
         const products = await db.Products.findAll({ order: [["price", "Asc"]] });
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
     dsc: async function (req, res) {
         const products = await db.Products.findAll({ order: [['price', 'DESC']] });
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
     videojuegos: async function (req, res) {
         const products = await db.Products.findAll({
             where: { category_id: 1 }
         })
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
     airelibre: async function (req, res) {
         const products = await db.Products.findAll({
             where: { category_id: 2 }
         })
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
     demesa: async function (req, res) {
         const products = await db.Products.findAll({
             where: { category_id: 3 }
         })
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
     juguetes: async function (req, res) {
         const products = await db.Products.findAll({
             where: { category_id: 4 }
         })
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
     menos2000: async function (req, res) {
         const products = await db.Products.findAll({
             where: { price: { [Op.lte]: '2000' } }
         })
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
     menos4000: async function (req, res) {
         const products = await db.Products.findAll({
             where: { price: { [Op.lte]: '4000' } }
         })
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
     menos6000: async function (req, res) {
         const products = await db.Products.findAll({
             where: { price: { [Op.lte]: '6000' } }
         })
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
     buscador: async function (req, res) {
         console.log(req.query.toys);
         const products = await db.Products.findAll({
             where: { name: { [Op.like]: `%${req.query.toys}%` } }
         })
-        res.render("menu-products", { products: products });
+        res.render("menu-products", { products: products,  user: req.session.userLogged });
     },
 }
 
