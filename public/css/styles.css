@@ -294,10 +294,6 @@ div.burger-menu i {
     }
 
 
-/*
-span .material-symbols-outlined {
-
-}*
 .erroresFront ul li {
     color: red;
     text-align: center;
@@ -943,7 +939,7 @@ footer img {
     color: white;
     text-decoration: none;
     font-size: 20px;
-    width: 200px;
+    width: 230px;
     text-align: center;
 }
 
@@ -1043,6 +1039,9 @@ padding: 10px;
 }
 
 @media (max-width: 540px) {
+    .infoitem i{
+        display: none;
+    }
     .logo {
         display: flex;
         width: 25%;

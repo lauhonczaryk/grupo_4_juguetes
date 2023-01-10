@@ -24,7 +24,7 @@
                         <br>
                         <br>
                         <div class="userEmail">
-                            <%= user.email %>
+                            <i class="fa-solid fa-envelope"></i> <%= user.email %>
                         </div>
                         <!--<div class="userEmail"><%= user.privilege %></div> -->
                     </div>
@@ -34,11 +34,10 @@
         <div class="botonvariado">
             <% if(locals.isLogged && user.privilege=='administrador' ) { %>
                 <div class="seguircomprando">
-                <a href="/productos/crear" >Crear producto</a></div>
-                <div class="seguircomprando"><a  href="/productos/listar" >Editar productos</a></div>
+                <a href="/productos/crear" ><i class="fa-solid fa-square-plus"></i> Crear producto</a></div>
+                <div class="seguircomprando"><a  href="/productos/listar" ><i class="fa-solid fa-pen-to-square"></i> Editar productos</a></div>
                 <% } else{ %>
                   <div class="seguircomprando"><a  href="/productos/listar" >Seguir comprando</a></div>
-    
                         <% } %>
         </div>
         <footer>
